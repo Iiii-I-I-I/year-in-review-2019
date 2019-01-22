@@ -2,12 +2,26 @@
           basics
    ===================== */
 
+:root {
+    --heading-color: #ffffff;
+    --text-color: #d9e2f4;
+    --link-color: #8cabe6;
+}
 body {
     font-size: 1.4rem;
-	font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    color: #cbd9f4;
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    color: #d9e2f4;
+    color: var(--text-color);
     background-color: #071022;
     margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+
+    body {
+        font-size: 1.1rem;
+    }
+
 }
 
 h1,
@@ -18,7 +32,8 @@ h5,
 h6 {
     font-family: 'PT Serif', 'Palatino', 'Georgia', serif;
     font-weight: bold;
-    color: #fff;
+    color: #ffffff;
+    color: var(--heading-color);
     margin: 0;
 }
 
@@ -37,6 +52,7 @@ li {
 
 a {
     color: #8cabe6;
+    color: var(--link-color);
     text-decoration: none;
 }
 
@@ -60,7 +76,7 @@ a:hover {
 
 .byline {
     font-size: .85em;
-    filter: brightness(.75);
+    filter: brightness(.85);
     margin: 0;
 }
 
@@ -71,6 +87,7 @@ a:hover {
 .yir-title {
     text-align: center;
     height: 100vh;
+    /* min-height: 35em; */
     max-height: 60em;
     display: flex;
 }
@@ -78,15 +95,6 @@ a:hover {
 .yir-title h1 {
     font-size: initial;
     margin: auto;
-}
-
-.title-big {
-    font-size: 25vw;
-    margin: -5vw 0 -4vw;
-}
-
-.title-small {
-    font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 @keyframes gamers-rise-up {
@@ -103,23 +111,43 @@ a:hover {
 
 }
 
+.title-small {
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    color: #d9e2f4;
+    color: var(--text-color);
+}
+
 .title-small:first-of-type {
-    color: #cbd9f4;
-    font-size: 4.5vw;
+    font-size: 4em;
     animation: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
 }
 
 .title-big {
-    /* -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(to right, #ee4231, #ee4231 5%, #f7861b, #f9d000, #6bc71f, #3ea6e6, #855cd8 95%, #855cd8); */
+    font-size: 20em;
+    margin: -4rem 0;
     animation: 1s .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
 }
 
 .title-small:last-of-type {
-    color: #cbd9f4;
-    font-size: 6vw;
+    font-size: 6em;
     animation: .9s .6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
+@media screen and (max-width: 800px) {
+
+    .title-small:first-of-type {
+        font-size: 8vw;
+    }
+
+    .title-small:last-of-type {
+        font-size: 12vw;
+    }
+
+    .title-big {
+        font-size: 40vw;
+        margin: -8vw 0;
+    }
+
 }
 
 /* ------------------
@@ -135,19 +163,18 @@ a:hover {
 
 .traffic-heading {
     width: 100%;
-    margin-top: 2.5em;
+    margin-top: 3em;
 }
 
 .stat {
-    width: 30%;
+    flex: 1;
     margin-right: 1em;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 420px) {
 
     .stat {
-        flex: 1;
-        width: initial;
+        flex: 1 100%;
     }
 
 }
@@ -176,6 +203,18 @@ a:hover {
     margin-top: 3em;
 }
 
+.popular-pages {
+    flex: 1;
+}
+
+@media screen and (max-width: 800px) {
+
+    .popular-group {
+        display: block;
+    }
+
+}
+
 /* ------------------
          wikis
    ------------------ */
@@ -188,7 +227,9 @@ a:hover {
 }
 
 .wiki {
-    color: #fff;
+    color: #ffffff;
+    color: var(--heading-color);
+    background-color: #222e45;
     width: 48%;
     padding: 2em;
     border-radius: .25em;
@@ -214,12 +255,12 @@ a:hover {
 }
 
 .wiki.ptbr {
-    background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.4)), url('../images/Wiki-PTBR.jpg') #222e45;
+    background-image: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.4)), url('../images/Wiki-PTBR.jpg');
     background-size: cover;
 }
 
 .wiki.classic {
-    background: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.25)), url('../images/Wiki-Classic.png') #222e45;
+    background-image: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.25)), url('../images/Wiki-Classic.png');
     background-size: cover;
 }
 
@@ -272,7 +313,7 @@ a:hover {
     .irl-gallery.two img,
     .irl-gallery.three img {
         width: 100%;
-        margin-top: .5em;
+        margin-top: 2vw;
     }
 
 }
