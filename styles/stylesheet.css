@@ -1,0 +1,278 @@
+/* =====================
+          basics
+   ===================== */
+
+body {
+    font-size: 1.4rem;
+	font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    color: #cbd9f4;
+    background-color: #071022;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'PT Serif', 'Palatino', 'Georgia', serif;
+    font-weight: bold;
+    color: #fff;
+    margin: 0;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.3em;
+}
+
+p,
+li {
+    line-height: 1.65em;
+}
+
+a {
+    color: #8cabe6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ------------------
+        sections
+   ------------------ */
+
+.yir-section:nth-child(even) {
+    background: #121b2e;
+}
+
+.yir-container {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 8em 8vw;
+}
+
+.byline {
+    font-size: .85em;
+    filter: brightness(.75);
+    margin: 0;
+}
+
+/* ------------------
+         title
+   ------------------ */
+
+.yir-title {
+    text-align: center;
+    height: 100vh;
+    max-height: 60em;
+    display: flex;
+}
+
+.yir-title h1 {
+    font-size: initial;
+    margin: auto;
+}
+
+.title-big {
+    font-size: 25vw;
+    margin: -5vw 0 -4vw;
+}
+
+.title-small {
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+@keyframes gamers-rise-up {
+
+    from {
+          opacity: 0;
+          transform: translateY(2rem);
+    }
+
+    to {
+          opacity: 1;
+          transform: translateY(0);
+    }
+
+}
+
+.title-small:first-of-type {
+    color: #cbd9f4;
+    font-size: 4.5vw;
+    animation: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
+.title-big {
+    /* -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, #ee4231, #ee4231 5%, #f7861b, #f9d000, #6bc71f, #3ea6e6, #855cd8 95%, #855cd8); */
+    animation: 1s .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
+.title-small:last-of-type {
+    color: #cbd9f4;
+    font-size: 6vw;
+    animation: .9s .6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
+/* ------------------
+        traffic
+   ------------------ */
+
+.traffic-stats {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 0 0 4em;
+}
+
+.traffic-heading {
+    width: 100%;
+    margin-top: 2.5em;
+}
+
+.stat {
+    width: 30%;
+    margin-right: 1em;
+}
+
+@media screen and (max-width: 800px) {
+
+    .stat {
+        flex: 1;
+        width: initial;
+    }
+
+}
+
+.stat dd {
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0 0 -0.15em;
+}
+
+.stat.before dd {
+    color: #3ea6e6;
+}
+
+.stat.after dd {
+    color: #6bc71f;
+}
+
+/* ------------------
+        popular
+   ------------------ */
+
+.popular-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
+
+/* ------------------
+         wikis
+   ------------------ */
+
+.wiki-group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.wiki {
+    color: #fff;
+    width: 48%;
+    padding: 2em;
+    border-radius: .25em;
+    box-sizing: border-box;
+    box-shadow: 0 .5em 1.5em rgba(0,0,0,.35);
+}
+
+.wiki:hover {
+    text-decoration: none;
+    filter: brightness(1.15);
+}
+
+@media screen and (max-width: 800px) {
+
+    .wiki {
+        width: 100%;
+    }
+
+    .wiki + .wiki {
+        margin-top: 1em;
+    }
+
+}
+
+.wiki.ptbr {
+    background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.4)), url('../images/Wiki-PTBR.jpg') #222e45;
+    background-size: cover;
+}
+
+.wiki.classic {
+    background: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.25)), url('../images/Wiki-Classic.png') #222e45;
+    background-size: cover;
+}
+
+/* ------------------
+       milestones
+   ------------------ */
+
+.milestone-list li {
+    margin-top: 1.5em;
+}
+
+/* ------------------
+          irl
+   ------------------ */
+
+.irl-trip {
+    margin: 3.5em 0 0;
+}
+
+.irl-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+}
+
+.irl-gallery img {
+    height: 100%;
+    border-radius: .25em;
+    box-shadow: 0 .5em 1em rgba(0,0,0,.3);
+}
+
+.irl-gallery + .irl-gallery {
+    margin-top: 1rem;
+}
+
+.irl-gallery.two img {
+    width: calc(100% / 2 - .5rem);
+}
+
+.irl-gallery.three img {
+    width: calc(100% / 3 - .75rem);
+}
+
+@media screen and (max-width: 800px) {
+
+    .irl-gallery {
+        display: initial;
+    }
+
+    .irl-gallery.two img,
+    .irl-gallery.three img {
+        width: 100%;
+        margin-top: .5em;
+    }
+
+}
