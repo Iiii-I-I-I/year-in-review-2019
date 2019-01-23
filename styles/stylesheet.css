@@ -223,7 +223,8 @@ a:hover {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin-top: 2em;
+    /* margin-top: 2em; */
+    margin: 2em -2em 0;
 }
 
 .wiki {
@@ -235,11 +236,13 @@ a:hover {
     border-radius: .25em;
     box-sizing: border-box;
     box-shadow: 0 .5em 1.5em rgba(0,0,0,.35);
+    transition: .2s ease-in-out;
 }
 
 .wiki:hover {
     text-decoration: none;
-    filter: brightness(1.15);
+    /* filter: brightness(1.15); */
+    transform: scale(1.02);
 }
 
 @media screen and (max-width: 800px) {
@@ -290,6 +293,11 @@ a:hover {
     height: 100%;
     border-radius: .25em;
     box-shadow: 0 .5em 1em rgba(0,0,0,.3);
+    transition: .2s ease-in-out;
+}
+
+.irl-gallery img:hover {
+    transform: scale(1.02);
 }
 
 .irl-gallery + .irl-gallery {
