@@ -27,9 +27,7 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
     font-family: 'PT Serif', 'Palatino', 'Georgia', serif;
     font-weight: bold;
     color: #ffffff;
@@ -71,7 +69,7 @@ a:hover {
 .yir-container {
     max-width: 52rem;
     margin: 0 auto;
-    padding: 8em 8vw;
+    padding: 8em 7vw;
 }
 
 .byline {
@@ -199,15 +197,31 @@ a:hover {
 
 .popular-group {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
     margin-top: 3em;
 }
 
-.popular-pages {
-    flex: 1;
+.popular-title {
+    flex: 1 100%;
+    margin-bottom: .75em;
 }
 
-@media screen and (max-width: 800px) {
+.popular-pages {
+    flex: 1;
+    margin-right: 1em;
+}
+
+.popular-pages ol {
+    margin-top: .5em;
+}
+
+.popular-pages h4 {
+    color: #d9e2f4;
+    color: var(--text-color);
+}
+
+@media screen and (max-width: 600px) {
 
     .popular-group {
         display: block;
@@ -223,8 +237,7 @@ a:hover {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    /* margin-top: 2em; */
-    margin: 2em -2em 0;
+    margin-top: 2em;
 }
 
 .wiki {
@@ -271,8 +284,20 @@ a:hover {
        milestones
    ------------------ */
 
+@media screen and (min-width: 800px) {
+
+    .milestone-list {
+        padding: 0 3em;
+    }
+
+}
+
 .milestone-list li {
-    margin-top: 1.5em;
+    margin-top: 2.5em;
+}
+
+.milestone-list h3 + p {
+    margin-top: .5em;
 }
 
 /* ------------------
