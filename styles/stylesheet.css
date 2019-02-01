@@ -20,7 +20,7 @@ body {
 @media screen and (max-width: 800px) {
 
     body {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
 }
@@ -72,6 +72,14 @@ a:hover {
     max-width: 52rem;
     margin: 0 auto;
     padding: 8em 7vw;
+}
+
+@media screen and (max-width: 800px) {
+
+    .yir-container {
+        padding: 6em 6vw;
+    }
+
 }
 
 .byline {
@@ -271,7 +279,7 @@ a:hover {
     }
 
     .wiki + .wiki {
-        margin-top: 1em;
+        margin-top: 3vw;
     }
 
 }
@@ -294,6 +302,14 @@ a:hover {
     position: relative;
     list-style: none;
     padding: 0 20px 0 67px;
+}
+
+@media screen and (max-width: 800px) {
+
+    .milestone-list {
+        margin-left: -1em;
+    }
+
 }
 
 .milestone-list::before {
@@ -340,7 +356,6 @@ a:hover {
 
 .editor-stats .stat {
     width: 30%;
-    min-width: 8em;
     margin: 1.5em 1em 0 0;
 }
 
