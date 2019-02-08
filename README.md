@@ -2,7 +2,7 @@
 
 This is a proof of concept for a year-in-review of the wikis on the [Weird Gloop](https://weirdgloop.org) network. You can view it live [here](https://iiii-i-i-i.github.io/year-in-review/).
 
-The intent is to create something like [Forum:Weird Gloop week 2 update](https://meta.weirdgloop.org/w/Forum:Weird_Gloop_week_2_update), except formatted in a reader-friendly way with nice colors and shit. Some ideas for what it could contain:
+The intent is to create something like [Forum:Weird Gloop week 2 update](https://meta.weirdgloop.org/w/Forum:Weird_Gloop_week_2_update), except formatted in a reader-friendly way and maybe with more interesting stuff for non-editors with nice colors and shit. Some ideas for what it could contain:
 
 ### Traffic stats
 - [ ] pageviews, etc. - don't reveal actual numbers?
@@ -20,8 +20,8 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 - [ ] https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2018-12-24/Special_report
 
 ### Launch of new wikis
-- [x] pt br
-- [x] runescape classic
+- [x] pt-br
+- [x] RuneScape Classic
 
 ### Milestones/highlights
 - [x] dark mode
