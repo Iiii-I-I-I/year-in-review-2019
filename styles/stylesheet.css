@@ -95,8 +95,15 @@ a:hover {
 .yir-title {
     text-align: center;
     height: 100vh;
-    max-height: 40em;
     display: flex;
+}
+
+@media screen and (max-width: 800px) {
+
+    .yir-title {
+        max-height: 60vmax;
+    }
+
 }
 
 .yir-title h1 {
@@ -108,7 +115,7 @@ a:hover {
 
     from {
           opacity: 0;
-          transform: translateY(2rem);
+          transform: translateY(30px);
     }
 
     to {
@@ -125,36 +132,19 @@ a:hover {
 }
 
 .title-small:first-of-type {
-    font-size: 4em;
+    font-size: 10vmin;
     animation: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
 }
 
 .title-big {
-    font-size: 20em;
-    margin: -4rem 0;
-    animation: 1s .3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+    font-size: 35vmin;
+    margin: -9vmin 0;
+    animation: 1s .25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
 }
 
 .title-small:last-of-type {
-    font-size: 6em;
-    animation: .9s .6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
-}
-
-@media screen and (max-width: 800px) {
-
-    .title-small:first-of-type {
-        font-size: 8vw;
-    }
-
-    .title-small:last-of-type {
-        font-size: 12vw;
-    }
-
-    .title-big {
-        font-size: 40vw;
-        margin: -8vw 0;
-    }
-
+    font-size: 12vmin;
+    animation: .9s .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
 }
 
 /* ------------------
@@ -268,8 +258,7 @@ a:hover {
 
 .wiki:hover {
     text-decoration: none;
-    /* filter: brightness(1.15); */
-    transform: scale(1.02);
+    transform: translateY(-0.15em);
 }
 
 @media screen and (max-width: 800px) {
@@ -396,7 +385,7 @@ a:hover {
 }
 
 .irl-gallery img:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 .irl-gallery + .irl-gallery {
