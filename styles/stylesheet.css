@@ -8,6 +8,11 @@
     --link-color: #8cabe6;
 }
 
+/* prevent adjustment of font size after orientation change in iOS */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
     font-size: 1.4rem;
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
@@ -101,7 +106,7 @@ a:hover {
 @media screen and (max-width: 800px) {
 
     .yir-title {
-        max-height: 60vmax;
+        max-height: 70vmax;
     }
 
 }
