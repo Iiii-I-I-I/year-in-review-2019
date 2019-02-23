@@ -72,6 +72,7 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 * http://yearinreview.co
 * https://dribbble.com/year/2018/
 * https://letterboxd.com/2018/
+* https://annual.wikimedia.org/2017/
 * https://news.microsoft.com/bythenumbers/en/homepage
 * https://nicolaschevobbe.com/2019/01/17/webconsole-2018-retrospective.html
 * https://rsms.me/inter/
