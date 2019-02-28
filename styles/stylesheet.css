@@ -16,7 +16,6 @@ html {
 body {
     font-size: 1.4rem;
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    color: #d9e2f4;
     color: var(--text-color);
     background-color: #071022;
     margin: 0;
@@ -36,7 +35,6 @@ h3,
 h4 {
     font-family: 'PT Serif', 'Palatino', 'Georgia', serif;
     font-weight: bold;
-    color: #ffffff;
     color: var(--heading-color);
     margin: 0;
 }
@@ -56,7 +54,6 @@ li ,
 }
 
 a {
-    color: #8cabe6;
     color: var(--link-color);
     text-decoration: none;
 }
@@ -132,7 +129,6 @@ a:hover {
 
 .title-small {
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    color: #d9e2f4;
     color: var(--text-color);
 }
 
@@ -226,7 +222,6 @@ a:hover {
 }
 
 .popular-pages h4 {
-    color: #d9e2f4;
     color: var(--text-color);
 }
 
@@ -250,7 +245,6 @@ a:hover {
 }
 
 .wiki {
-    color: #ffffff;
     color: var(--heading-color);
     background-color: #222e45;
     width: 48%;
