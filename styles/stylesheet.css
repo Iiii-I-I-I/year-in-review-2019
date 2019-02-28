@@ -6,6 +6,8 @@
     --heading-color: #ffffff;
     --text-color: #d9e2f4;
     --link-color: #8cabe6;
+    --section-color: #071022;
+    --section-alt-color: #121b2e;
 }
 
 /* prevent adjustment of font size after orientation change in iOS */
@@ -17,7 +19,6 @@ body {
     font-size: 1.4rem;
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
     color: var(--text-color);
-    background-color: #071022;
     margin: 0;
 }
 
@@ -66,8 +67,12 @@ a:hover {
         sections
    ------------------ */
 
+.yir-section {
+    background-color: var(--section-color);
+}
+
 .yir-section:nth-child(even) {
-    background: #121b2e;
+    background-color: var(--section-alt-color);
 }
 
 .yir-container {
@@ -127,24 +132,23 @@ a:hover {
 
 }
 
-.title-small {
-    font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    color: var(--text-color);
-}
-
-.title-small:first-of-type {
-    font-size: 10vmin;
-    animation: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
-}
-
 .title-big {
     font-size: 35vmin;
     margin: -9vmin 0;
     animation: 1s .25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
 }
 
+.title-small {
+    color: var(--text-color);
+}
+
+.title-small:first-of-type {
+    font-size: 9vmin;
+    animation: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
 .title-small:last-of-type {
-    font-size: 12vmin;
+    font-size: 11vmin;
     animation: .9s .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
 }
 
@@ -323,7 +327,7 @@ a:hover {
     width: 17px;
     height: 17px;
     background-color: #596e96;
-    border: 5px solid #071022;
+    border: 5px solid var(--section-color);
     border-radius: 50%;
 }
 
