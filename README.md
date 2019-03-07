@@ -6,8 +6,8 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 
 ### Traffic stats
 - [ ] pageviews, etc. - don't reveal actual numbers?
-- [ ] percent growth (make a nice graph)
-- [ ] traffic recovery vs old wikia site
+- [x] percent growth (make a nice graph)
+- [x] traffic recovery vs old wikia site
 - [ ] visits by country, new country visits
 - [ ] traffic bumps - point out big updates
 
@@ -34,19 +34,21 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 - [ ] i don't really know what happened
 - [ ] gif thumbnailing
 - [ ] job queue server
-- [ ] example https://nicolaschevobbe.com/2019/01/17/webconsole-2018-retrospective.html
+- [ ] "Kitty moved most of our database interaction over to a SQL proxy and that has reduced the server-side load time for pages by about 40%"
+- [ ] full caching of articles for anonymous users
+- [ ] ask jayden/kitty for a brief paragraph on each one, for example https://nicolaschevobbe.com/2019/01/17/webconsole-2018-retrospective.html
 
 ### Wiki stats
 - [ ] number of new articles in the past year
-- [ ] number of new files
-- [ ] number of new edits
+- [x] number of new files
+- [x] number of new edits
 - [ ] number of people that edited in the past year
 - [ ] most edited article
 - [ ] number of videos: 0
 - [ ] number of ads: 0
 - [ ] average number of edits a day
-- [ ] number of wikian titles granted
-- [ ] number of DMCA takedowns sent
+- [x] number of Wikian titles granted
+- [x] number of DMCA takedowns sent
 - [ ] examples https://github.com/jwngr/sdow/blob/master/website/src/resources/wikipediaFacts.json
 
 ### Player stats
@@ -59,6 +61,7 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 - [x] talk about real life meetups
 - [x] presence at runefest
 - [x] show photos and videos?
+- [ ] add lightbox https://photoswipe.com
 
 ### Quotes
 - [ ] jmod quotes? ones taken out of context?
@@ -70,6 +73,7 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 ### Thank readers and users
 - [ ] ask for help with big projects
 - [ ] plug the Wikian title
+- [ ] plug editing bond program
 
 ## Inspiration
 * http://yearinreview.co
