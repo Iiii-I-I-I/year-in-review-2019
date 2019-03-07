@@ -227,8 +227,9 @@ a:hover {
 }
 
 .popular-pages ol {
-    margin: .5em 0 0;
     font-size: .95em;
+    margin: .5em 0 0;
+    padding-left: 2em;
 }
 
 .popular-pages h4 {
