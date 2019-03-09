@@ -267,7 +267,7 @@ a:hover {
 .wiki {
     color: var(--heading-color);
     background-color: var(--accent-color);
-    width: 48%;
+    width: calc((100% - .75em) / 2);
     padding: 1.5em 2em;
     border-radius: .25em;
     box-sizing: border-box;
@@ -292,6 +292,15 @@ a:hover {
 
 }
 
+/* prevent "Portuguese-Brazilian RuneScape Wiki"  from wrapping onto three lines */
+@media screen and (min-width: 800px) and (max-width: 850px) {
+
+    .wiki {
+        padding: 1.25em 1.5em;
+    }
+
+}
+
 .wiki.ptbr {
     background-image: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.4)), url('../images/Wiki-PTBR.jpg');
     background-size: cover;
@@ -300,6 +309,18 @@ a:hover {
 .wiki.classic {
     background-image: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.25)), url('../images/Wiki-Classic.png');
     background-size: cover;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+
+    .wiki.ptbr {
+        background-image: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.4)), url('../images/Wiki-PTBR@2x.jpg');
+    }
+
+    .wiki.classic {
+        background-image: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.25)), url('../images/Wiki-Classic@2x.png');
+    }
+
 }
 
 /* ------------------
