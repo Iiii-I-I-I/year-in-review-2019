@@ -50,6 +50,7 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 - [x] number of Wikian titles granted
 - [x] number of DMCA takedowns sent
 - [ ] examples https://github.com/jwngr/sdow/blob/master/website/src/resources/wikipediaFacts.json
+- [ ] https://stats.wikimedia.org/v2/#/en.wikipedia.org
 
 ### Player stats
 - [ ] is this relevant? all players, or just clan members/editors/anyone that wants to be included?
