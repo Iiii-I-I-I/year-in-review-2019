@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html class="is-dark-mode" lang="en" dir="ltr">
+
+<script>
+    // Code from <https://blog.jim-nielsen.com/2018/icon-galleries-dark-mode/>
+    // Figure out if the page we're on should be in dark mode or not
+    var isDarkMode = localStorage.getItem("isDarkMode");
+
+    // If the value hasn't been set yet, we'll set it for you based on whether
+    // your system says you're in dark mode or not.
+    if (isDarkMode === null) {
+        localStorage.setItem(
+            "isDarkMode",
+            window.matchMedia('(prefers-color-scheme: dark)').matches
+        );
+    }
+
+    // Determine whether we're in dark mode or not and render the approprate class
+    // on the `<html>` element. We do this right up front so we don't get any
+    // strang flashing as the browser renders the DOM.
+    else if (isDarkMode === "true") {
+        document.documentElement.classList.add("is-dark-mode");
+    }
+</script>
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>2018 Year in Review – Weird Gloop</title>
-
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700|PT+Serif:700">
     <link rel="stylesheet" href="styles/stylesheet.css">
@@ -13,13 +34,22 @@
 
 <body>
 
-    <header class="yir-section yir-title">
-        <h1>
-            <div class="title-small">Weird Gloop</div>
-            <div class="title-big">2018</div>
-            <div class="title-small">Year in Review</div>
-        </h1>
+    <header class="yir-section">
+        <div class="title">
+            <h1>
+                <div class="title-small">Weird Gloop</div>
+                <div class="title-big">2018</div>
+                <div class="title-small">Year in Review</div>
+            </h1>
+        </div>
+        <label class="dark-mode-toggle" for="dark-mode-toggle" title="Toggle dark mode">
+            <input type="checkbox" name="dark-mode-toggle" id="dark-mode-toggle">
+            <svg class="svg-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <path d="M17.3956,15.8648 C12.2784,15.8648 8.133,11.7168 8.133,6.602 C8.133,4.9176 8.6164,3.3598 9.4026,2 C5.1372,3.2304 2,7.1172 2,11.7778 C2,17.4222 6.5752,22 12.2198,22 C16.8804,22 20.7696,18.8604 22,14.5976 C20.6376,15.3812 19.08,15.8648 17.3956,15.8648 Z"></path>
+            </svg>
+          </label>
     </header>
+
 
     <section class="yir-section traffic">
         <div class="yir-container">
@@ -275,6 +305,8 @@
             </div>
         </div>
     </section>
+
+    <script src="scripts/dark-mode-toggle.js"></script>
 
 </body>
 

@@ -1,5 +1,5 @@
 /* =====================
-          basics
+          colors
    ===================== */
 
 :root {
@@ -7,10 +7,26 @@
     --text-color: #d9e2f4;
     --link-color: #8cabe6;
     --section-color: #071022;
-    --section-alt-color: #121b2e;
+    --section-color-alt: #121b2e;
     --accent-color: #313e59;
+    --accent-color-alt: #596e96;
     --box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
 }
+
+:root.is-dark-mode {
+    --heading-color: #EC6BF7;
+    --text-color: navy;
+    --link-color: #8cabe6;
+    --section-color: #FFF176;
+    --section-color-alt: #fff487;
+    --accent-color: #61F4E2;
+    --accent-color-alt: #61F4E2;
+    --box-shadow: 0 .25em .75em rgba(0, 0, 0, .25);
+}
+
+/* =====================
+          basics
+   ===================== */
 
 /* prevent adjustment of font size after orientation change in iOS */
 html {
@@ -74,7 +90,7 @@ a:hover {
 }
 
 .yir-section:nth-child(even) {
-    background-color: var(--section-alt-color);
+    background-color: var(--section-color-alt);
 }
 
 .yir-container {
@@ -101,7 +117,7 @@ a:hover {
          title
    ------------------ */
 
-.yir-title {
+.title {
     text-align: center;
     height: 100vh;
     display: flex;
@@ -109,13 +125,13 @@ a:hover {
 
 @media screen and (max-width: 800px) {
 
-    .yir-title {
+    .title {
         max-height: 70vmax;
     }
 
 }
 
-.yir-title h1 {
+.title h1 {
     font-size: initial;
     margin: auto;
 }
@@ -152,6 +168,51 @@ a:hover {
 .title-small:last-of-type {
     font-size: 11vmin;
     animation: .9s .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
+/* -------------------
+        dark mode
+   ------------------- */
+
+.dark-mode-toggle {
+    position: fixed;
+    top: .75em;
+    right: .75em;
+    width: 36px;
+    height: 36px;
+
+    background-color: var(--accent-color);
+    /* filter: brightness(.8); */
+    opacity: .8;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.dark-mode-toggle input {
+    opacity: 0;
+}
+
+.dark-mode-toggle svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    stroke-width: 2px;
+    stroke: var(--text-color);
+    fill: transparent;
+    transition: .2s ease all;
+}
+
+.dark-mode-toggle:hover svg {
+    filter: brightness(1.15);
+}
+
+.is-dark-mode .dark-mode-toggle svg {
+    fill: var(--text-color);
+    stroke: var(--text-color);
 }
 
 /* ------------------
@@ -220,7 +281,7 @@ a:hover {
 
 .popular-pages {
     flex: 1;
-    background: var(--section-alt-color);
+    background: var(--section-color-alt);
     margin-right: .7em;
     padding: 1.25em 1.5em;
     box-shadow: var(--box-shadow);
@@ -265,7 +326,8 @@ a:hover {
 }
 
 .wiki {
-    color: var(--heading-color);
+    /* color: var(--heading-color); */
+    color: white;
     background-color: var(--accent-color);
     width: calc((100% - .75em) / 2);
     padding: 1.5em 2em;
@@ -273,6 +335,10 @@ a:hover {
     box-sizing: border-box;
     box-shadow: var(--box-shadow);
     transition: .2s ease-in-out;
+}
+
+.wiki h3 {
+    color: white;
 }
 
 .wiki:hover {
@@ -363,7 +429,7 @@ a:hover {
     content: "";
     width: 17px;
     height: 17px;
-    background-color: #596e96;
+    background-color: var(--accent-color-alt);
     border: 5px solid var(--section-color);
     border-radius: 50%;
 }
