@@ -5,6 +5,7 @@
 :root {
     --heading-color: #ffffff;
     --text-color: #d9e2f4;
+    --text-color-alt: #b8c0cf;
     --link-color: #8cabe6;
     --section-color: #071022;
     --section-color-alt: #121b2e;
@@ -15,7 +16,8 @@
 
 :root.is-dark-mode {
     --heading-color: #EC6BF7;
-    --text-color: navy;
+    --text-color: #424795;
+    --text-color-alt: navy;
     --link-color: #8cabe6;
     --section-color: #FFF176;
     --section-color-alt: #fff487;
@@ -108,8 +110,8 @@ a:hover {
 }
 
 .byline {
+    color: var(--text-color-alt);
     font-size: .85em;
-    filter: brightness(.85);
     margin: 0;
 }
 
@@ -174,7 +176,7 @@ a:hover {
         dark mode
    ------------------- */
 
-.dark-mode-toggle {
+#dark-mode-toggle {
     position: fixed;
     top: .75em;
     right: .75em;
@@ -182,17 +184,16 @@ a:hover {
     height: 36px;
 
     background-color: var(--accent-color);
-    /* filter: brightness(.8); */
     opacity: .8;
     border-radius: 7px;
     cursor: pointer;
 }
 
-.dark-mode-toggle input {
+#dark-mode-toggle input {
     opacity: 0;
 }
 
-.dark-mode-toggle svg {
+#dark-mode-toggle svg {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -201,16 +202,21 @@ a:hover {
     width: 16px;
     height: 16px;
     stroke-width: 2px;
-    stroke: var(--text-color);
+    stroke: var(--text-color-alt);
     fill: transparent;
-    transition: .2s ease all;
+    transition: .3s ease;
 }
 
-.dark-mode-toggle:hover svg {
-    filter: brightness(1.15);
+#dark-mode-toggle:hover svg {
+    stroke: var(--text-color);
 }
 
-.is-dark-mode .dark-mode-toggle svg {
+.is-dark-mode #dark-mode-toggle svg {
+    fill: var(--text-color-alt);
+    stroke: var(--text-color-alt);
+}
+
+.is-dark-mode #dark-mode-toggle:hover svg {
     fill: var(--text-color);
     stroke: var(--text-color);
 }
@@ -502,7 +508,7 @@ a:hover {
 
 .irl-gallery img {
     width: 100%;
-    border-radius: .2em;
+    border-radius: .25em;
     box-shadow: var(--box-shadow);
     transition: .2s ease-in-out;
 }
