@@ -87,7 +87,7 @@ h3 {
 }
 
 p,
-li ,
+li,
 .byline {
     line-height: 1.6;
 }
@@ -97,7 +97,8 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover,
+a:focus {
     text-decoration: underline;
 }
 
@@ -141,7 +142,6 @@ a:hover {
     text-align: center;
     height: 100vh;
     display: flex;
-    background-image: linear-gradient(var(--section-color), var(--section-color-alt));
 }
 
 .is-dark-mode .title {
@@ -306,9 +306,13 @@ a:hover {
 .popular-pages {
     flex: 1;
     background: var(--section-color-alt);
-    margin-right: .7em;
     padding: 1.25em 1.5em;
     box-shadow: var(--box-shadow);
+    border-radius: .25em;
+}
+
+.popular-pages + .popular-pages {
+    margin-left: 1em;
 }
 
 .popular-pages ol {
@@ -318,7 +322,6 @@ a:hover {
 }
 
 .popular-pages h4 {
-    color: var(--text-color);
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
@@ -328,12 +331,9 @@ a:hover {
         display: block;
     }
 
-    .popular-pages {
-        margin-right: 0;
-    }
-
     .popular-pages + .popular-pages {
-        margin-top: .7em;
+        margin-left: 0;
+        margin-top: 1em;
     }
 
 }
@@ -419,15 +419,7 @@ a:hover {
 .milestone-list {
     position: relative;
     list-style: none;
-    padding: 0 20px 0 67px;
-}
-
-@media screen and (max-width: 800px) {
-
-    .milestone-list {
-        margin-left: -1em;
-    }
-
+    padding: 30px 0 10px 67px;
 }
 
 .milestone-list::before {
@@ -437,17 +429,29 @@ a:hover {
     left: 35px;
     width: 4px;
     height: calc(100% - 5px);
-    background-image: linear-gradient(to top, var(--section-color), var(--accent-color) 3em, var(--accent-color));
+    /*  fade in the ends of the line using pixel values (instead of percentages)
+        with help from <https://stackoverflow.com/a/30425097> */
+    background:
+        linear-gradient(to bottom, var(--section-color), var(--accent-color) 30px) top no-repeat,
+        linear-gradient(to top, var(--section-color), var(--accent-color) 40px) bottom no-repeat;
+    background-size: 100% 50%;
+}
+
+.milestone-list h3 + p {
+    margin-top: .5em;
 }
 
 .milestone-list li {
-    margin-top: 2.5em;
     position: relative;
+}
+
+.milestone-list li + li {
+    margin-top: 2.5em;
 }
 
 .milestone-list li::before {
     position: absolute;
-    top: 1px;
+    top: 36px;
     left: -44px;
     content: "";
     width: 17px;
@@ -457,8 +461,16 @@ a:hover {
     border-radius: 50%;
 }
 
-.milestone-list h3 + p {
-    margin-top: .5em;
+@media screen and (max-width: 800px) {
+
+    .milestone-list {
+        margin-left: -1em;
+    }
+
+    .milestone-list li::before {
+        top: 25px;
+    }
+
 }
 
 /* ------------------
