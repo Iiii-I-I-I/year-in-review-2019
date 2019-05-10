@@ -3,6 +3,20 @@
    ===================== */
 
 :root {
+    supported-color-schemes: light dark; /* legacy syntax */
+    color-scheme: light dark; /* new syntax */
+    --heading-color: #93598f;
+    --text-color: #7a4b77;
+    --text-color-alt: #a675a3;
+    --link-color: #b947b2;
+    --section-color: #ecd0eb;
+    --section-color-alt: #efd8ed;
+    --accent-color: #e0bbdb;
+    --accent-color-alt: #cda2c6;
+    --box-shadow: 0 .25em .4em rgba(0, 0, 0, .1);
+}
+
+:root.is-dark-mode {
     --heading-color: #ffffff;
     --text-color: #d9e2f4;
     --text-color-alt: #b8c0cf;
@@ -14,16 +28,20 @@
     --box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
 }
 
-:root.is-dark-mode {
-    --heading-color: #EC6BF7;
-    --text-color: #424795;
-    --text-color-alt: navy;
-    --link-color: #8cabe6;
-    --section-color: #FFF176;
-    --section-color-alt: #fff487;
-    --accent-color: #61F4E2;
-    --accent-color-alt: #61F4E2;
-    --box-shadow: 0 .25em .75em rgba(0, 0, 0, .25);
+@media (prefers-color-scheme: dark) {
+
+    /* :root {
+        --heading-color: #ffffff;
+        --text-color: #d9e2f4;
+        --text-color-alt: #b8c0cf;
+        --link-color: #8cabe6;
+        --section-color: #071022;
+        --section-color-alt: #121b2e;
+        --accent-color: #313e59;
+        --accent-color-alt: #596e96;
+        --box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
+    } */
+
 }
 
 /* =====================
@@ -123,6 +141,11 @@ a:hover {
     text-align: center;
     height: 100vh;
     display: flex;
+    background-image: linear-gradient(var(--section-color), var(--section-color-alt));
+}
+
+.is-dark-mode .title {
+    /* background-image: linear-gradient(var(--section-color), var(--section-color-alt)); */
 }
 
 @media screen and (max-width: 800px) {
@@ -176,47 +199,42 @@ a:hover {
         dark mode
    ------------------- */
 
+/* modified from <https://blog.jim-nielsen.com/2018/icon-galleries-dark-mode/> */
+
 #dark-mode-toggle {
     position: fixed;
     top: .75em;
     right: .75em;
     width: 36px;
     height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     background-color: var(--accent-color);
-    opacity: .8;
     border-radius: 7px;
     cursor: pointer;
 }
 
-#dark-mode-toggle input {
-    opacity: 0;
-}
-
-#dark-mode-toggle svg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -8px;
-    margin-top: -8px;
-    width: 16px;
-    height: 16px;
-    stroke-width: 2px;
-    stroke: var(--text-color-alt);
+#dark-mode-toggle .svg-moon {
+    width: 17px;
+    height: 17px;
     fill: transparent;
-    transition: .3s ease;
+    stroke: var(--text-color-alt);
+    stroke-width: 2px;
+    transition: fill .3s ease, stroke .3s ease;
 }
 
-#dark-mode-toggle:hover svg {
+#dark-mode-toggle:hover .svg-moon {
     stroke: var(--text-color);
 }
 
-.is-dark-mode #dark-mode-toggle svg {
+.is-dark-mode #dark-mode-toggle .svg-moon {
     fill: var(--text-color-alt);
     stroke: var(--text-color-alt);
 }
 
-.is-dark-mode #dark-mode-toggle:hover svg {
+.is-dark-mode #dark-mode-toggle:hover .svg-moon {
     fill: var(--text-color);
     stroke: var(--text-color);
 }
@@ -332,8 +350,6 @@ a:hover {
 }
 
 .wiki {
-    /* color: var(--heading-color); */
-    color: white;
     background-color: var(--accent-color);
     width: calc((100% - .75em) / 2);
     padding: 1.5em 2em;
@@ -343,7 +359,8 @@ a:hover {
     transition: .2s ease-in-out;
 }
 
-.wiki h3 {
+.wiki h3,
+.wiki .byline {
     color: white;
 }
 
@@ -508,7 +525,7 @@ a:hover {
 
 .irl-gallery img {
     width: 100%;
-    border-radius: .25em;
+    border-radius: .2em;
     box-shadow: var(--box-shadow);
     transition: .2s ease-in-out;
 }
