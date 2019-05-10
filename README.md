@@ -5,11 +5,10 @@ This is a proof of concept for a year-in-review of the wikis on the [Weird Gloop
 The intent is to create something like [Forum:Weird Gloop week 2 update](https://meta.weirdgloop.org/w/Forum:Weird_Gloop_week_2_update), except formatted in a reader-friendly way and maybe with more interesting stuff for non-editors with nice colors and shit. Some ideas for what it could contain:
 
 ### Traffic stats
-- [ ] pageviews, etc. - don't reveal actual numbers?
-- [x] percent growth (make a nice graph)
+- [ ] pageviews, etc. - how specific can we get?
+- [x] percent growth (make a nice graph) - annotate big increases/decreases
 - [x] traffic recovery vs old wikia site
 - [ ] visits by country, new country visits
-- [ ] traffic bumps - point out big updates
 
 ### Most popular pages of the year
 - [x] split into rsw and osrsw
@@ -64,10 +63,6 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 - [x] show photos and videos?
 - [ ] add lightbox https://photoswipe.com
 
-### Quotes
-- [ ] jmod quotes? ones taken out of context?
-- [ ] "identify the person who said the quote" game
-
 ### Trivia
 - [ ] bits of RS trivia found on our articles
 
@@ -78,10 +73,11 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 
 ## Inspiration
 * http://yearinreview.co
-* https://dribbble.com/year/2018/
-* https://letterboxd.com/2018/
-* https://annual.wikimedia.org/2017/
-* https://news.microsoft.com/bythenumbers/en/homepage
-* https://www.nytimes.com/interactive/2017/reader-center/year-in-review.html
 * https://rsms.me/inter/
+* https://letterboxd.com/2018/
+* https://dribbble.com/year/2018/
+* https://annual.wikimedia.org/2017/
 * https://www.projectwallace.com/~teamwallace/github
+* https://news.microsoft.com/bythenumbers/en/homepage
+* https://www.typography.com/fonts/ideal-sans/how-to-use
+* https://www.nytimes.com/interactive/2017/reader-center/year-in-review.html
