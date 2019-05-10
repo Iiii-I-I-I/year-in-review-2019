@@ -30,12 +30,12 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 - [ ] rs in-game integration (????)
 
 ### Back end improvements
-- [ ] i don't really know what happened
+- [ ] the growing pains we went through the first week of launch
 - [ ] gif thumbnailing
 - [ ] job queue server
 - [ ] "Kitty moved most of our database interaction over to a SQL proxy and that has reduced the server-side load time for pages by about 40%"
 - [ ] full caching of articles for anonymous users
-- [ ] ask jayden/kitty for a brief paragraph on each one, for example https://nicolaschevobbe.com/2019/01/17/webconsole-2018-retrospective.html
+- [ ] have jayden & kitty write a brief paragraph on each one, for example https://nicolaschevobbe.com/2019/01/17/webconsole-2018-retrospective.html
 
 ### Wiki stats
 - [ ] number of new articles in the past year
