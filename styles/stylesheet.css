@@ -5,9 +5,9 @@
 :root {
     supported-color-schemes: light dark; /* legacy syntax */
     color-scheme: light dark; /* new syntax */
-    --heading-color: #93598f;
-    --text-color: #7a4b77;
-    --text-color-alt: #a675a3;
+    --heading-color: #6f3c6c;
+    --text-color: #83497f;
+    --text-color-alt: #9f6d9c;
     --link-color: #b947b2;
     --section-color: #ecd0eb;
     --section-color-alt: #efd8ed;
@@ -90,6 +90,16 @@ p,
 li,
 .byline {
     line-height: 1.6;
+}
+
+code {
+    font-size: .85em;
+    background: rgba(0, 0, 0, 0.025);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25em;
+    padding: .1em .3em;
+    margin: 0 .2em;
+    font-family: 'IBM Plex Mono', 'Menlo', 'Inconsolata', monospace;
 }
 
 a {
@@ -210,6 +220,7 @@ a:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
     background-color: var(--accent-color);
     border-radius: 7px;
@@ -432,7 +443,7 @@ a:focus {
     /*  fade in the ends of the line using pixel values (instead of percentages)
         with help from <https://stackoverflow.com/a/30425097> */
     background:
-        linear-gradient(to bottom, var(--section-color), var(--accent-color) 30px) top no-repeat,
+        linear-gradient(to bottom, var(--section-color), var(--accent-color) 40px) top no-repeat,
         linear-gradient(to top, var(--section-color), var(--accent-color) 40px) bottom no-repeat;
     background-size: 100% 50%;
 }
