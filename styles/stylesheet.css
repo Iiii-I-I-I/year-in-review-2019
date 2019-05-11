@@ -97,8 +97,7 @@ code {
     background: rgba(0, 0, 0, 0.025);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25em;
-    padding: .1em .3em;
-    margin: 0 .2em;
+    padding: .1em .25em;
     font-family: 'IBM Plex Mono', 'Menlo', 'Inconsolata', monospace;
 }
 
@@ -213,8 +212,8 @@ a:focus {
 
 #dark-mode-toggle {
     position: fixed;
-    top: .75em;
-    right: .75em;
+    top: 1.25em;
+    right: 1.25em;
     width: 36px;
     height: 36px;
     display: flex;
@@ -225,6 +224,7 @@ a:focus {
     background-color: var(--accent-color);
     border-radius: 7px;
     cursor: pointer;
+    border: none;
 }
 
 #dark-mode-toggle .svg-moon {
