@@ -3,8 +3,8 @@
    ===================== */
 
 :root {
-    supported-color-schemes: light dark; /* legacy syntax */
-    color-scheme: light dark; /* new syntax */
+    /* supported-color-schemes: light dark;
+    color-scheme: light dark; */
     --heading-color: #6f3c6c;
     --text-color: #83497f;
     --text-color-alt: #9f6d9c;
@@ -93,7 +93,7 @@ li,
 }
 
 code {
-    font-size: .85em;
+    font-size: .9em;
     background: rgba(0, 0, 0, 0.025);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: .25em;
@@ -211,29 +211,31 @@ a:focus {
 /* modified from <https://blog.jim-nielsen.com/2018/icon-galleries-dark-mode/> */
 
 #dark-mode-toggle {
+    --button-size: 3em;
+
     position: fixed;
     top: 1.25em;
     right: 1.25em;
-    width: 36px;
-    height: 36px;
+    width: var(--button-size);
+    height: var(--button-size);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
 
     background-color: var(--accent-color);
-    border-radius: 7px;
+    border-radius: .6em;
     cursor: pointer;
     border: none;
 }
 
 #dark-mode-toggle .svg-moon {
-    width: 17px;
-    height: 17px;
+    width: calc( var(--button-size) / 2);
+    height: calc( var(--button-size) / 2);
     fill: transparent;
     stroke: var(--text-color-alt);
     stroke-width: 2px;
-    transition: fill .3s ease, stroke .3s ease;
+    transition: fill .5s ease, stroke .5s ease;
 }
 
 #dark-mode-toggle:hover .svg-moon {
@@ -448,6 +450,10 @@ a:focus {
     background-size: 100% 50%;
 }
 
+.milestone-list h3 {
+    line-height: 1.2;
+}
+
 .milestone-list h3 + p {
     margin-top: .5em;
 }
@@ -472,10 +478,10 @@ a:focus {
     border-radius: 50%;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 720px) {
 
     .milestone-list {
-        margin-left: -1em;
+        margin-left: -1.25em;
     }
 
     .milestone-list li::before {
