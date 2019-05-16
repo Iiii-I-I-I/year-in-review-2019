@@ -131,63 +131,6 @@ a:focus {
     margin: 0;
 }
 
-/* ------------------
-         title
-   ------------------ */
-
-.title {
-    text-align: center;
-    height: 100vh;
-    display: flex;
-}
-
-.title h1 {
-    font-size: initial;
-    margin: auto;
-}
-
-@keyframes gamers-rise-up {
-
-    from {
-          opacity: 0;
-          transform: translateY(30px);
-    }
-
-    to {
-          opacity: 1;
-          transform: translateY(0);
-    }
-
-}
-
-.title-big {
-    font-size: 35vmin;
-    margin: -9vmin 0;
-    animation: 1s .25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
-}
-
-.title-small {
-    color: var(--text-color);
-}
-
-.title-small:first-of-type {
-    font-size: 9vmin;
-    animation: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
-}
-
-.title-small:last-of-type {
-    font-size: 11vmin;
-    animation: .9s .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
-}
-
-@media screen and (max-width: 800px) {
-
-    .title {
-        max-height: 70vmax;
-    }
-
-}
-
 /* -------------------
         dark mode
    ------------------- */
@@ -234,6 +177,63 @@ a:focus {
 .is-dark-mode #dark-mode-toggle:hover .svg-moon {
     fill: var(--text-color);
     stroke: var(--text-color);
+}
+
+/* ------------------
+         title
+   ------------------ */
+
+.title {
+    height: 100vh;
+    display: flex;
+}
+
+.title h1 {
+    text-align: center;
+    font-size: initial;
+    margin: auto;
+}
+
+@keyframes gamers-rise-up {
+
+    from {
+          opacity: 0;
+          transform: translateY(30px);
+    }
+
+    to {
+          opacity: 1;
+          transform: translateY(0);
+    }
+
+}
+
+.title-big {
+    font-size: 35vmin;
+    line-height: 0.75;
+    animation: 1s .25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
+.title-small {
+    color: var(--text-color);
+}
+
+.title-small:first-of-type {
+    font-size: 9vmin;
+    animation: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
+.title-small:last-of-type {
+    font-size: 11vmin;
+    animation: .9s .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
+@media screen and (max-width: 800px) {
+
+    .title {
+        max-height: 70vmax;
+    }
+
 }
 
 /* ------------------
