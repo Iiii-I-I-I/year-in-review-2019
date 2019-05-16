@@ -3,16 +3,17 @@
    ===================== */
 
 :root {
-    /* supported-color-schemes: light dark;
-    color-scheme: light dark; */
-    --heading-color: #6f3c6c;
-    --text-color: #83497f;
-    --text-color-alt: #9f6d9c;
-    --link-color: #b947b2;
-    --section-color: #ecd0eb;
-    --section-color-alt: #efd8ed;
-    --accent-color: #e0bbdb;
-    --accent-color-alt: #cda2c6;
+    --heading-color: #444e5a;
+    --text-color: #5d6773;
+    --text-color-alt: #949eaa;
+    --link-color: #327ba7;
+    --code-color: #edf1f1;
+
+    --section-color: #f3f5f5;
+    --section-color-alt: #f9fafa;
+    --accent-color: #dae0e4;
+    --accent-color-alt: #a2abb7;
+
     --box-shadow: 0 .25em .4em rgba(0, 0, 0, .1);
 }
 
@@ -21,27 +22,14 @@
     --text-color: #d9e2f4;
     --text-color-alt: #b8c0cf;
     --link-color: #8cabe6;
+    --code-color: rgba(255, 255, 255, 0.1);
+
     --section-color: #071022;
     --section-color-alt: #121b2e;
     --accent-color: #313e59;
     --accent-color-alt: #596e96;
+
     --box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
-}
-
-@media (prefers-color-scheme: dark) {
-
-    /* :root {
-        --heading-color: #ffffff;
-        --text-color: #d9e2f4;
-        --text-color-alt: #b8c0cf;
-        --link-color: #8cabe6;
-        --section-color: #071022;
-        --section-color-alt: #121b2e;
-        --accent-color: #313e59;
-        --accent-color-alt: #596e96;
-        --box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
-    } */
-
 }
 
 /* =====================
@@ -94,10 +82,10 @@ li,
 
 code {
     font-size: .9em;
-    background: rgba(0, 0, 0, 0.025);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    background: var(--code-color);
+    border: 1px solid var(--accent-color);
     border-radius: .25em;
-    padding: .1em .25em;
+    padding: .1em .3em;
     font-family: 'IBM Plex Mono', 'Menlo', 'Inconsolata', monospace;
 }
 
@@ -151,10 +139,6 @@ a:focus {
     text-align: center;
     height: 100vh;
     display: flex;
-}
-
-.is-dark-mode .title {
-    /* background-image: linear-gradient(var(--section-color), var(--section-color-alt)); */
 }
 
 @media screen and (max-width: 800px) {
@@ -211,7 +195,7 @@ a:focus {
 /* modified from <https://blog.jim-nielsen.com/2018/icon-galleries-dark-mode/> */
 
 #dark-mode-toggle {
-    --button-size: 3em;
+    --button-size: 36px;
 
     position: fixed;
     top: 1.25em;
@@ -219,8 +203,6 @@ a:focus {
     width: var(--button-size);
     height: var(--button-size);
     display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: 1;
 
     background-color: var(--accent-color);
@@ -232,6 +214,8 @@ a:focus {
 #dark-mode-toggle .svg-moon {
     width: calc( var(--button-size) / 2);
     height: calc( var(--button-size) / 2);
+    margin: auto;
+
     fill: transparent;
     stroke: var(--text-color-alt);
     stroke-width: 2px;
@@ -468,7 +452,7 @@ a:focus {
 
 .milestone-list li::before {
     position: absolute;
-    top: 36px;
+    top: 32px;
     left: -44px;
     content: "";
     width: 17px;
