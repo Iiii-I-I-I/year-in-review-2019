@@ -141,14 +141,6 @@ a:focus {
     display: flex;
 }
 
-@media screen and (max-width: 800px) {
-
-    .title {
-        max-height: 70vmax;
-    }
-
-}
-
 .title h1 {
     font-size: initial;
     margin: auto;
@@ -186,6 +178,14 @@ a:focus {
 .title-small:last-of-type {
     font-size: 11vmin;
     animation: .9s .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both gamers-rise-up;
+}
+
+@media screen and (max-width: 800px) {
+
+    .title {
+        max-height: 70vmax;
+    }
+
 }
 
 /* -------------------
@@ -257,14 +257,6 @@ a:focus {
     margin-right: 1em;
 }
 
-@media screen and (max-width: 420px) {
-
-    .traffic-stats .stat {
-        flex: 1 100%;
-    }
-
-}
-
 .traffic-stats .stat dd {
     font-size: 3.5em;
     font-weight: bold;
@@ -282,6 +274,14 @@ a:focus {
 .traffic img {
     width: 100%;
     margin: 2em 0 1em;
+}
+
+@media screen and (max-width: 420px) {
+
+    .traffic-stats .stat {
+        flex: 1 100%;
+    }
+
 }
 
 /* ------------------
@@ -366,6 +366,16 @@ a:focus {
     transform: translateY(-0.15em);
 }
 
+.wiki.ptbr {
+    background-image: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.4)), url('../images/Wiki-PTBR.jpg');
+    background-size: cover;
+}
+
+.wiki.classic {
+    background-image: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.25)), url('../images/Wiki-Classic.png');
+    background-size: cover;
+}
+
 @media screen and (max-width: 800px) {
 
     .wiki {
@@ -385,16 +395,6 @@ a:focus {
         padding: 1.25em 1.5em;
     }
 
-}
-
-.wiki.ptbr {
-    background-image: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.4)), url('../images/Wiki-PTBR.jpg');
-    background-size: cover;
-}
-
-.wiki.classic {
-    background-image: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.25)), url('../images/Wiki-Classic.png');
-    background-size: cover;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
@@ -490,19 +490,19 @@ a:focus {
     margin: 1.5em 1em 0 0;
 }
 
+.editor-stats .stat dd {
+    color: #3ea6e6;
+    font-size: 3.5em;
+    font-weight: bold;
+    margin: 0 0 -0.15em;
+}
+
 @media screen and (min-width: 800px) {
 
     .editor-stats .stat:nth-child(3n) {
         margin-right: 0;
     }
 
-}
-
-.editor-stats .stat dd {
-    color: #3ea6e6;
-    font-size: 3.5em;
-    font-weight: bold;
-    margin: 0 0 -0.15em;
 }
 
 /* ------------------
@@ -517,6 +517,17 @@ a:focus {
     display: grid;
     grid-gap: .7em;
     margin-top: 1.5em;
+}
+
+.irl-gallery img {
+    width: 100%;
+    border-radius: .2em;
+    box-shadow: var(--box-shadow);
+    transition: .2s ease-in-out;
+}
+
+.irl-gallery img:hover {
+    transform: scale(1.01);
 }
 
 @media screen and (min-width: 500px) {
@@ -534,15 +545,4 @@ a:focus {
         margin: 1.5em -3em 0;
     }
 
-}
-
-.irl-gallery img {
-    width: 100%;
-    border-radius: .2em;
-    box-shadow: var(--box-shadow);
-    transition: .2s ease-in-out;
-}
-
-.irl-gallery img:hover {
-    transform: scale(1.01);
 }
