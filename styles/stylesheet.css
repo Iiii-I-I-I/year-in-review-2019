@@ -74,6 +74,17 @@ h3 {
     font-size: 1.3em;
 }
 
+/* fix heading being hidden underneath sticky header
+   technique from <https://css-tricks.com/hash-tag-links-padding/> */
+h2:target::before {
+    content: '';
+    display: block;
+    height: 5rem;
+    margin-top: -5rem;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 p,
 li,
 .byline {
@@ -138,7 +149,7 @@ a:focus {
 /* modified from <https://blog.jim-nielsen.com/2018/icon-galleries-dark-mode/> */
 
 #dark-mode-toggle {
-    --button-size: 36px;
+    --button-size: 3em;
 
     position: fixed;
     top: 1.25em;
@@ -146,7 +157,7 @@ a:focus {
     width: var(--button-size);
     height: var(--button-size);
     display: flex;
-    z-index: 1;
+    z-index: 11;
 
     background-color: var(--accent-color);
     border-radius: .6em;
@@ -179,9 +190,23 @@ a:focus {
     stroke: var(--text-color);
 }
 
+@media screen and (max-width: 800px) {
+
+    #dark-mode-toggle {
+        --button-size: 2.5em;
+        top: .75em;
+        right: .75em;
+    }
+
+}
+
 /* ------------------
          title
    ------------------ */
+
+header.yir-section {
+    background-color: var(--section-color-alt);
+}
 
 .title {
     height: 100vh;
@@ -232,6 +257,61 @@ a:focus {
 
     .title {
         max-height: 70vmax;
+    }
+
+}
+
+/* ------------------
+          nav
+   ------------------ */
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 .5em .5em -0.3em rgba(0, 0, 0, .1);
+}
+
+.is-dark-mode nav {
+    box-shadow: 0 .5em .5em -0.3em rgba(0, 0, 0, .4);
+}
+
+nav ul.yir-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: .9em;
+    list-style: none;
+    padding-top: .75em;
+    padding-bottom: .75em;
+}
+
+nav li a {
+    color: var(--text-color);
+    font-weight: bold;
+    padding: .5em .75em;
+}
+
+nav li:first-of-type a {
+    padding-left: 0;
+}
+
+nav li:last-of-type a {
+    padding-right: 0;
+}
+
+@media screen and (max-width: 550px) {
+
+    nav {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    nav ul.yir-container {
+        justify-content: flex-start;
     }
 
 }
@@ -302,7 +382,7 @@ a:focus {
 
 .popular-pages {
     flex: 1;
-    background: var(--section-color-alt);
+    background: var(--section-color);
     padding: 1.25em 1.5em;
     box-shadow: var(--box-shadow);
     border-radius: .25em;
@@ -429,8 +509,8 @@ a:focus {
     /*  fade in the ends of the line using pixel values (instead of percentages)
         with help from <https://stackoverflow.com/a/30425097> */
     background:
-        linear-gradient(to bottom, var(--section-color), var(--accent-color) 40px) top no-repeat,
-        linear-gradient(to top, var(--section-color), var(--accent-color) 40px) bottom no-repeat;
+        linear-gradient(to bottom, var(--section-color-alt), var(--accent-color) 40px) top no-repeat,
+        linear-gradient(to top, var(--section-color-alt), var(--accent-color) 40px) bottom no-repeat;
     background-size: 100% 50%;
 }
 
@@ -458,7 +538,7 @@ a:focus {
     width: 17px;
     height: 17px;
     background-color: var(--accent-color-alt);
-    border: 5px solid var(--section-color);
+    border: 5px solid var(--section-color-alt);
     border-radius: 50%;
 }
 
