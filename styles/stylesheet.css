@@ -251,8 +251,6 @@ nav li:first-of-type a {
 #dark-mode-toggle .svg-moon {
     --button-size: 1.75em;
 
-    width: var(--button-size);
-    height: var(--button-size);
     fill: var(--text-color);
     margin: auto;
     transition: fill .3s ease;
@@ -263,7 +261,7 @@ nav li:first-of-type a {
 }
 
 /* hide everything except dark mode switch */
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 575px) {
 
     nav {
         position: fixed;
@@ -287,7 +285,7 @@ nav li:first-of-type a {
 
 }
 
-@media screen and (min-width: 551px) and (max-width: 800px) {
+@media screen and (min-width: 576px) and (max-width: 800px) {
 
     #dark-mode-toggle {
         padding-top: 0;
