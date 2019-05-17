@@ -142,64 +142,6 @@ a:focus {
     margin: 0;
 }
 
-/* -------------------
-        dark mode
-   ------------------- */
-
-/* modified from <https://blog.jim-nielsen.com/2018/icon-galleries-dark-mode/> */
-
-#dark-mode-toggle {
-    --button-size: 3em;
-
-    position: fixed;
-    top: 1.25em;
-    right: 1.25em;
-    width: var(--button-size);
-    height: var(--button-size);
-    display: flex;
-    z-index: 11;
-
-    background-color: var(--accent-color);
-    border-radius: .6em;
-    cursor: pointer;
-    border: none;
-}
-
-#dark-mode-toggle .svg-moon {
-    width: calc( var(--button-size) / 2);
-    height: calc( var(--button-size) / 2);
-    margin: auto;
-
-    fill: transparent;
-    stroke: var(--text-color-alt);
-    stroke-width: 2px;
-    transition: fill .5s ease, stroke .5s ease;
-}
-
-#dark-mode-toggle:hover .svg-moon {
-    stroke: var(--text-color);
-}
-
-.is-dark-mode #dark-mode-toggle .svg-moon {
-    fill: var(--text-color-alt);
-    stroke: var(--text-color-alt);
-}
-
-.is-dark-mode #dark-mode-toggle:hover .svg-moon {
-    fill: var(--text-color);
-    stroke: var(--text-color);
-}
-
-@media screen and (max-width: 800px) {
-
-    #dark-mode-toggle {
-        --button-size: 2.5em;
-        top: .75em;
-        right: .75em;
-    }
-
-}
-
 /* ------------------
          title
    ------------------ */
@@ -296,22 +238,63 @@ nav li:first-of-type a {
     padding-left: 0;
 }
 
-nav li:last-of-type a {
-    padding-right: 0;
+/* modified from <https://blog.jim-nielsen.com/2018/icon-galleries-dark-mode/> */
+#dark-mode-toggle {
+    display: flex;
+    background: none;
+    padding-top: .3em;
+    border: none;
+    border-radius: .6em;
+    cursor: pointer;
 }
 
+#dark-mode-toggle .svg-moon {
+    --button-size: 1.75em;
+
+    width: var(--button-size);
+    height: var(--button-size);
+    fill: var(--text-color);
+    margin: auto;
+    transition: fill .3s ease;
+}
+
+#dark-mode-toggle:hover .svg-moon {
+    fill: var(--text-color-alt);
+}
+
+/* hide everything except dark mode switch */
 @media screen and (max-width: 550px) {
 
     nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: transparent !important;
+        box-shadow: none;
+    }
+
+    nav ul.yir-container {
+        padding: .5em;
+    }
+
+    nav li:not(:last-of-type) {
         display: none;
+    }
+
+    #dark-mode-toggle .svg-moon {
+        --button-size: 2em;
     }
 
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 551px) and (max-width: 800px) {
 
-    nav ul.yir-container {
-        justify-content: flex-start;
+    #dark-mode-toggle {
+        padding-top: 0;
+    }
+
+    #dark-mode-toggle .svg-moon {
+        --button-size: 1.5em;
     }
 
 }
