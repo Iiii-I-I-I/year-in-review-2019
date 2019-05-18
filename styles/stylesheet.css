@@ -15,6 +15,7 @@
     --accent-color-alt: #a2abb7;
 
     --box-shadow: 0 .25em .4em rgba(0, 0, 0, .1);
+    --grid-gap: .8em;
 }
 
 :root.is-dark-mode {
@@ -22,7 +23,7 @@
     --text-color: #d9e2f4;
     --text-color-alt: #b8c0cf;
     --link-color: #8cabe6;
-    --code-color: rgba(255, 255, 255, 0.1);
+    --code-color: #242f45;
 
     --section-color: #071022;
     --section-color-alt: #121b2e;
@@ -89,15 +90,6 @@ p,
 li,
 .byline {
     line-height: 1.6;
-}
-
-code {
-    font-size: .9em;
-    background: var(--code-color);
-    border: 1px solid var(--accent-color);
-    border-radius: .25em;
-    padding: .1em .3em;
-    font-family: 'IBM Plex Mono', 'Menlo', 'Inconsolata', monospace;
 }
 
 a {
@@ -208,6 +200,7 @@ header.yir-section {
    ------------------ */
 
 nav {
+    font-size: .8em;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -222,14 +215,13 @@ nav {
 nav ul.yir-container {
     display: flex;
     justify-content: space-between;
-    font-size: .9em;
     list-style: none;
     padding-top: .75em;
     padding-bottom: .75em;
 }
 
 nav li a {
-    color: var(--text-color);
+    color: var(--text-color-alt);
     font-weight: bold;
     padding: .5em .75em;
 }
@@ -238,11 +230,15 @@ nav li:first-of-type a {
     padding-left: 0;
 }
 
+nav li:last-of-type {
+    display: flex;
+}
+
 /* modified from <https://blog.jim-nielsen.com/2018/icon-galleries-dark-mode/> */
 #dark-mode-toggle {
-    display: flex;
     background: none;
-    padding-top: .3em;
+    margin: auto;
+    padding: 0;
     border: none;
     border-radius: .6em;
     cursor: pointer;
@@ -251,13 +247,14 @@ nav li:first-of-type a {
 #dark-mode-toggle .svg-moon {
     --button-size: 1.75em;
 
-    fill: var(--text-color);
-    margin: auto;
+    fill: var(--text-color-alt);
+    width: var(--button-size);
+    height: var(--button-size);
     transition: fill .3s ease;
 }
 
 #dark-mode-toggle:hover .svg-moon {
-    fill: var(--text-color-alt);
+    fill: var(--text-color);
 }
 
 /* hide everything except dark mode switch */
@@ -271,8 +268,12 @@ nav li:first-of-type a {
         box-shadow: none;
     }
 
+    .is-dark-mode nav {
+        box-shadow: none;
+    }
+
     nav ul.yir-container {
-        padding: .5em;
+        padding: .75em;
     }
 
     nav li:not(:last-of-type) {
@@ -409,7 +410,7 @@ nav li:first-of-type a {
 
 .wiki {
     background-color: var(--accent-color);
-    width: calc((100% - .75em) / 2);
+    width: calc((100% - var(--grid-gap)) / 2);
     padding: 1.5em 2em;
     border-radius: .25em;
     box-sizing: border-box;
@@ -437,23 +438,23 @@ nav li:first-of-type a {
     background-size: cover;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 650px) {
 
     .wiki {
         width: 100%;
     }
 
     .wiki + .wiki {
-        margin-top: 3vw;
+        margin-top: var(--grid-gap);
     }
 
 }
 
 /* prevent "Portuguese-Brazilian RuneScape Wiki"  from wrapping onto three lines */
-@media screen and (min-width: 800px) and (max-width: 850px) {
+@media screen and (min-width: 820px) and (max-width: 865px) {
 
     .wiki {
-        padding: 1.25em 1.5em;
+        padding: 1.25em 1.4em;
     }
 
 }
@@ -480,6 +481,7 @@ nav li:first-of-type a {
     padding: 30px 0 10px 67px;
 }
 
+/* the vertical line */
 .milestone-list::before {
     content: "";
     position: absolute;
@@ -511,6 +513,7 @@ nav li:first-of-type a {
     margin-top: 2.5em;
 }
 
+/* the dot */
 .milestone-list li::before {
     position: absolute;
     top: 32px;
@@ -523,6 +526,16 @@ nav li:first-of-type a {
     border-radius: 50%;
 }
 
+code {
+    font-size: .9em;
+    background: var(--code-color);
+    border: 1px solid var(--accent-color);
+    border-radius: .25em;
+    padding: .1em .25em;
+    margin: 0 .1em;
+    font-family: 'IBM Plex Mono', 'Menlo', 'Inconsolata', monospace;
+}
+
 @media screen and (max-width: 720px) {
 
     .milestone-list {
@@ -530,7 +543,7 @@ nav li:first-of-type a {
     }
 
     .milestone-list li::before {
-        top: 25px;
+        top: 21px;
     }
 
 }
@@ -576,7 +589,7 @@ nav li:first-of-type a {
 
 .irl-gallery {
     display: grid;
-    grid-gap: .7em;
+    grid-gap: var(--grid-gap);
     margin-top: 1.5em;
 }
 
