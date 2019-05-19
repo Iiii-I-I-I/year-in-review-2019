@@ -14,7 +14,7 @@
     --accent-color: #dae0e4;
     --accent-color-alt: #a2abb7;
 
-    --box-shadow: 0 .25em .4em rgba(0, 0, 0, .1);
+    --box-shadow: 0 .25em .4em rgba(0, 0, 0, .2);
     --grid-gap: .8em;
 }
 
@@ -239,6 +239,7 @@ nav li:last-of-type {
     background: none;
     margin: auto;
     padding: 0;
+    padding-left: .75em;
     border: none;
     border-radius: .6em;
     cursor: pointer;
@@ -258,7 +259,7 @@ nav li:last-of-type {
 }
 
 /* hide everything except dark mode switch */
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 550px) {
 
     nav {
         position: fixed;
@@ -286,11 +287,7 @@ nav li:last-of-type {
 
 }
 
-@media screen and (min-width: 576px) and (max-width: 800px) {
-
-    #dark-mode-toggle {
-        padding-top: 0;
-    }
+@media screen and (min-width: 551px) and (max-width: 800px) {
 
     #dark-mode-toggle .svg-moon {
         --button-size: 1.5em;
@@ -366,8 +363,6 @@ nav li:last-of-type {
     flex: 1;
     background: var(--section-color);
     padding: 1.25em 1.5em;
-    box-shadow: var(--box-shadow);
-    border-radius: .25em;
 }
 
 .popular-pages + .popular-pages {
@@ -536,7 +531,7 @@ code {
     font-family: 'IBM Plex Mono', 'Menlo', 'Inconsolata', monospace;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 800px) {
 
     .milestone-list {
         margin-left: -1.25em;
