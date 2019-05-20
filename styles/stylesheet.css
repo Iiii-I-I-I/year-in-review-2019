@@ -376,6 +376,7 @@ nav li:last-of-type {
 }
 
 .popular-pages h4 {
+    color: var(--text-color);
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
@@ -474,6 +475,7 @@ nav li:last-of-type {
     position: relative;
     list-style: none;
     padding: 30px 0 10px 67px;
+    margin-top: 1.5em;
 }
 
 /* the vertical line */
