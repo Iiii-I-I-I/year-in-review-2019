@@ -378,8 +378,6 @@ nav li:last-of-type {
 
 .popular-pages li {
     counter-increment: item;
-    display: flex;
-    align-items: center;
     list-style: none;
     margin-top: .4em;
 }
