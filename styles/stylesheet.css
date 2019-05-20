@@ -415,6 +415,10 @@ nav li:last-of-type {
     transition: .2s ease-in-out;
 }
 
+html:not(.is-dark-mode) .wiki {
+    filter: brightness(1.4);
+}
+
 .wiki h3,
 .wiki .byline {
     color: white;
@@ -426,12 +430,12 @@ nav li:last-of-type {
 }
 
 .wiki.ptbr {
-    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.65)), url('../images/Wiki-PTBR.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .65)), url('../images/Wiki-PTBR.jpg');
     background-size: cover;
 }
 
 .wiki.classic {
-    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.65)), url('../images/Wiki-Classic.png');
+    background-image: linear-gradient(rgba(0, 0, 0, .25), rgba(0, 0, 0, .5)), url('../images/Wiki-Classic.png');
     background-size: cover;
 }
 
@@ -466,11 +470,11 @@ nav li:last-of-type {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 
     .wiki.ptbr {
-        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.65)), url('../images/Wiki-PTBR@2x.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .65)), url('../images/Wiki-PTBR@2x.jpg');
     }
 
     .wiki.classic {
-        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.65)), url('../images/Wiki-Classic@2x.png');
+        background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .55)), url('../images/Wiki-Classic@2x.png');
     }
 
 }
@@ -605,8 +609,13 @@ code {
     transition: .2s ease-in-out;
 }
 
+.is-dark-mode .irl-gallery img {
+    filter: brightness(0.9);
+}
+
 .irl-gallery img:hover {
     transform: scale(1.01);
+    filter: brightness(1);
 }
 
 @media screen and (min-width: 500px) {
