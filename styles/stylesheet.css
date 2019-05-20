@@ -401,7 +401,8 @@ nav li:last-of-type {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin-top: 2em;
+    width: 90%;
+    margin: 2em auto 0;
 }
 
 .wiki {
@@ -425,12 +426,12 @@ nav li:last-of-type {
 }
 
 .wiki.ptbr {
-    background-image: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.4)), url('../images/Wiki-PTBR.jpg');
+    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.65)), url('../images/Wiki-PTBR.jpg');
     background-size: cover;
 }
 
 .wiki.classic {
-    background-image: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.25)), url('../images/Wiki-Classic.png');
+    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.65)), url('../images/Wiki-Classic.png');
     background-size: cover;
 }
 
@@ -446,8 +447,15 @@ nav li:last-of-type {
 
 }
 
-/* prevent "Portuguese-Brazilian RuneScape Wiki"  from wrapping onto three lines */
-@media screen and (min-width: 820px) and (max-width: 865px) {
+@media screen and (max-width: calc(52rem + 12vw)) {
+
+    .wiki-group {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 650px) and (max-width: calc(52rem + 12vw)) {
 
     .wiki {
         padding: 1.25em 1.4em;
@@ -458,11 +466,11 @@ nav li:last-of-type {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 
     .wiki.ptbr {
-        background-image: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,.4)), url('../images/Wiki-PTBR@2x.jpg');
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.65)), url('../images/Wiki-PTBR@2x.jpg');
     }
 
     .wiki.classic {
-        background-image: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.25)), url('../images/Wiki-Classic@2x.png');
+        background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.65)), url('../images/Wiki-Classic@2x.png');
     }
 
 }
