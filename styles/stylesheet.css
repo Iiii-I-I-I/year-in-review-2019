@@ -254,7 +254,8 @@ nav li:last-of-type {
     transition: fill .3s ease;
 }
 
-#dark-mode-toggle:hover .svg-moon {
+#dark-mode-toggle:hover .svg-moon,
+#dark-mode-toggle:focus .svg-moon {
     fill: var(--text-color);
 }
 
@@ -453,7 +454,8 @@ html:not(.is-dark-mode) .wiki {
     color: white;
 }
 
-.wiki:hover {
+.wiki:hover,
+.wiki:focus {
     text-decoration: none;
     transform: translateY(-0.1em);
 }
@@ -643,7 +645,8 @@ code {
     filter: brightness(0.9);
 }
 
-.irl-gallery img:hover {
+.irl-gallery img:hover,
+.irl-gallery img:focus {
     transform: scale(1.01);
     filter: brightness(1);
 }
