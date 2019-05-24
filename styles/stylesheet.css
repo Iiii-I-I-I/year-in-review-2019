@@ -95,11 +95,32 @@ li,
 a {
     color: var(--link-color);
     text-decoration: none;
+    position: relative;
+}
+
+
+/* animate link hover underline
+   <https://cssanimation.rocks/animating-links/> */
+
+a::after {
+    content: '';
+    border-top: 1.5px solid var(--link-color);
+    transition: right .3s cubic-bezier(0, .5, 0, 1);
+
+    position: absolute;
+    right: 100%;
+    bottom: -1px;
+    left: 0;
 }
 
 a:hover,
 a:focus {
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+a:hover::after,
+a:focus::after {
+    right: 0;
 }
 
 /* ------------------
@@ -205,6 +226,7 @@ nav {
     position: sticky;
     top: 0;
     z-index: 10;
+    margin-left: -1.75em;
     box-shadow: 0 .5em .5em -0.3em rgba(0, 0, 0, .1);
 }
 
@@ -220,14 +242,27 @@ nav ul.yir-container {
     padding-bottom: .75em;
 }
 
-nav li a {
+nav a {
     color: var(--text-color-alt);
     font-weight: bold;
     padding: .5em .75em;
 }
 
+/* fix color and positioning for underline */
+nav a::after {
+    border-color: var(--text-color-alt);
+    border-width: .125em;
+    bottom: .45em;
+    left: .75em;
+}
+
+nav a:hover::after,
+nav a:focus::after {
+    right: 0.75em;
+}
+
 nav li:first-of-type a {
-    padding-left: 0;
+    /* padding-left: 0; */
 }
 
 nav li:last-of-type {
@@ -370,6 +405,11 @@ nav li:last-of-type {
     margin-left: var(--grid-gap);
 }
 
+.popular-pages h4 {
+    color: var(--text-color);
+    font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
 .popular-pages ol {
     font-size: .95em;
     margin: .75em 0 0;
@@ -406,9 +446,9 @@ nav li:last-of-type {
     user-select: none;
 }
 
-.popular-pages h4 {
-    color: var(--text-color);
-    font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
+/* fix positioning for underline */
+.popular-pages li a::after {
+    bottom: .075em;
 }
 
 @media screen and (max-width: 550px) {
@@ -459,7 +499,11 @@ html:not(.is-dark-mode) .wiki {
 .wiki:hover,
 .wiki:focus {
     text-decoration: none;
-    transform: translateY(-0.1em);
+    transform: translateY(-0.15em);
+}
+
+.wiki::after {
+    display: none;
 }
 
 .wiki.ptbr {
