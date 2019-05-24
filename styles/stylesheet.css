@@ -693,7 +693,7 @@ code {
 
 .irl-gallery img:hover,
 .irl-gallery img:focus {
-    transform: scale(1.01);
+    transform: translateY(-0.15em);
     filter: brightness(1);
 }
 
