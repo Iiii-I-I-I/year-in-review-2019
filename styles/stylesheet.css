@@ -697,6 +697,10 @@ code {
     filter: brightness(1);
 }
 
+.irl-gallery a::after {
+    display: none;
+}
+
 @media screen and (min-width: 500px) {
 
     .irl-gallery {
