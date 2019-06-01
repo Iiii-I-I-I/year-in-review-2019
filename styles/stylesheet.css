@@ -374,7 +374,7 @@ nav li:last-of-type {
 .popular-pages h4 {
     color: var(--text-color-alt);
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    border-bottom: 1px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
     padding-bottom: .5em;
 }
 
