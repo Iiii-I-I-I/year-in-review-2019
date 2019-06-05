@@ -692,3 +692,7 @@ code {
     height: 90vh;
     width: 100vw;
 }
+
+.views-image {
+    padding: 3vh 3vw;
+}
