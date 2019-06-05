@@ -14,7 +14,8 @@
     --accent-color: #dae0e4;
     --accent-color-alt: #a2abb7;
 
-    --box-shadow: 0 .15em .3em rgba(0, 0, 0, .2);
+    --box-shadow-light: 0 .1em .15em rgba(0, 0, 0, .05);
+    --box-shadow-dark: 0 .15em .4em -0.05em rgba(0, 0, 0, .25);
     --grid-gap: .8em;
 }
 
@@ -30,7 +31,8 @@
     --accent-color: #313e59;
     --accent-color-alt: #596e96;
 
-    --box-shadow: 0 .5em 1em rgba(0, 0, 0, .3);
+    --box-shadow-light: 0 .15em .25em rgba(0, 0, 0, .2);
+    --box-shadow-dark: 0 .25em .75em rgba(0, 0, 0, .3);
 }
 
 /* =====================
@@ -95,7 +97,6 @@ li,
 a {
     color: var(--link-color);
     text-decoration: none;
-    position: relative;
 }
 
 a:hover,
@@ -222,8 +223,8 @@ nav ul.yir-container {
 }
 
 nav li a {
-    color: var(--text-color-alt);
-    font-weight: bold;
+    color: var(--text-color);
+    /* font-weight: bold; */
     padding: .5em .75em;
 }
 
@@ -364,6 +365,7 @@ nav li:last-of-type {
 .popular-pages {
     flex: 1;
     background: var(--section-color-alt);
+    box-shadow: var(--box-shadow-light);
     padding: 1.25em 1.75em;
 }
 
@@ -372,14 +374,14 @@ nav li:last-of-type {
 }
 
 .popular-pages h4 {
-    color: var(--text-color-alt);
+    color: var(--text-color);
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    border-bottom: 2px solid var(--accent-color);
     padding-bottom: .5em;
+    border-bottom: 1px solid var(--accent-color);
 }
 
 .popular-pages ol {
-    font-size: .95em;
+    font-size: .85em;
     margin: .75em 0 0;
     padding-left: 0;
     counter-reset: item;
@@ -445,7 +447,7 @@ nav li:last-of-type {
     padding: 1.5em 2em;
     border-radius: .25em;
     box-sizing: border-box;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-dark);
     transition: .2s ease-in-out;
 }
 
@@ -645,13 +647,13 @@ code {
 
 .irl-gallery img {
     width: 100%;
-    border-radius: .2em;
-    box-shadow: var(--box-shadow);
+    border-radius: .25em;
+    box-shadow: var(--box-shadow-dark);
     transition: .2s ease-in-out;
 }
 
 .is-dark-mode .irl-gallery img {
-    filter: brightness(0.9);
+    filter: brightness(0.85);
 }
 
 .irl-gallery img:hover,
@@ -687,6 +689,6 @@ code {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
 }
