@@ -15,7 +15,7 @@
     --accent-color-alt: #a2abb7;
 
     --box-shadow-light: 0 .1em .15em rgba(0, 0, 0, .05);
-    --box-shadow-dark: 0 .15em .4em -0.05em rgba(0, 0, 0, .25);
+    --box-shadow-dark: 0 .15em .4em -0.05em rgba(0, 0, 0, .35);
     --grid-gap: .8em;
 }
 
