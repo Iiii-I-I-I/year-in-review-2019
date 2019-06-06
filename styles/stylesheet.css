@@ -32,7 +32,7 @@
     --accent-color-alt: #596e96;
 
     --box-shadow-light: 0 .15em .25em rgba(0, 0, 0, .2);
-    --box-shadow-dark: 0 .25em .75em rgba(0, 0, 0, .3);
+    --box-shadow-dark: 0 .25em .75em rgba(0, 0, 0, .35);
 }
 
 /* =====================
@@ -202,7 +202,7 @@ header.yir-section {
    ------------------ */
 
 nav {
-    font-size: .8em;
+    font-size: .7em;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -366,7 +366,7 @@ nav li:last-of-type {
     flex: 1;
     background: var(--section-color-alt);
     box-shadow: var(--box-shadow-light);
-    padding: 1.25em 1.75em;
+    padding: 1.25em 2em;
 }
 
 .popular-pages + .popular-pages {
@@ -376,12 +376,12 @@ nav li:last-of-type {
 .popular-pages h4 {
     color: var(--text-color);
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    padding-bottom: .5em;
+    padding-bottom: .3em;
     border-bottom: 1px solid var(--accent-color);
 }
 
 .popular-pages ol {
-    font-size: .85em;
+    font-size: .9em;
     margin: .75em 0 0;
     padding-left: 0;
     counter-reset: item;
@@ -448,7 +448,7 @@ nav li:last-of-type {
     border-radius: .25em;
     box-sizing: border-box;
     box-shadow: var(--box-shadow-dark);
-    transition: .2s ease-in-out;
+    transition: transform .2s ease-in-out;
 }
 
 /* lighten gradient in light mode */
