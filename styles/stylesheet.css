@@ -292,6 +292,10 @@ nav li:last-of-type {
 
 @media screen and (min-width: 551px) and (max-width: 800px) {
 
+    nav {
+        font-size: .75em;
+    }
+
     #dark-mode-toggle .svg-moon {
         --button-size: 1.5em;
     }
