@@ -649,21 +649,24 @@ code {
     margin-top: 1.5em;
 }
 
+.irl-gallery a {
+    transition: .2s ease-in-out;
+}
+
+.irl-gallery a:hover,
+.irl-gallery a:focus {
+    transform: translateY(-0.15em);
+    filter: brightness(1);
+}
+
+.is-dark-mode .irl-gallery a {
+    filter: brightness(0.85);
+}
+
 .irl-gallery img {
     width: 100%;
     border-radius: .25em;
     box-shadow: var(--box-shadow-dark);
-    transition: .2s ease-in-out;
-}
-
-.is-dark-mode .irl-gallery img {
-    filter: brightness(0.85);
-}
-
-.irl-gallery img:hover,
-.irl-gallery img:focus {
-    transform: translateY(-0.15em);
-    filter: brightness(1);
 }
 
 @media screen and (min-width: 500px) {
