@@ -370,7 +370,7 @@ nav li:last-of-type {
     flex: 1;
     background: var(--section-color-alt);
     box-shadow: var(--box-shadow-light);
-    padding: 1.25em 2em;
+    padding: 1.25em 1.8em;
 }
 
 .popular-pages + .popular-pages {
@@ -380,7 +380,7 @@ nav li:last-of-type {
 .popular-pages h4 {
     color: var(--text-color);
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
-    padding-bottom: .3em;
+    padding-bottom: .35em;
     border-bottom: 1px solid var(--accent-color);
 }
 
