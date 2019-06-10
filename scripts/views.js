@@ -224,11 +224,17 @@
             case this.element:
                 event.preventDefault();
                 this.open();
+                var thisObject = this;
+                document.addEventListener('keypress', function(event) {
+                    if (event.keyCode === 27) {
+                        thisObject.close();
+                    }
+                }, { once : true }, false);
                 break;
             case this.view:
                 if (this.options.anywhereToClose || event.target == this.closeButton) {
                     this.close();
-                }
+                };
                 break;
         }
     };
