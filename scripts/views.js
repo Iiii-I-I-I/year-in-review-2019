@@ -224,15 +224,18 @@
             case this.element:
                 event.preventDefault();
                 this.open();
+                console.log('viewing image ' + this);
                 var thisObject = this;
                 document.addEventListener('keypress', function(event) {
                     if (event.keyCode === 27) {
+                        console.log('esc close ' + this + thisObject);
                         thisObject.close();
                     }
                 }, { once : true }, false);
                 break;
             case this.view:
                 if (this.options.anywhereToClose || event.target == this.closeButton) {
+                    console.log('clicked close ' + this);
                     this.close();
                 };
                 break;
