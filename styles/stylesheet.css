@@ -160,7 +160,7 @@ header.yir-section {
 
     from {
           opacity: 0;
-          transform: translateY(15px);
+          transform: translateY(20px);
     }
 
     to {
@@ -244,7 +244,6 @@ nav li:last-of-type {
     padding: 0;
     padding-left: .75em;
     border: none;
-    border-radius: .6em;
     cursor: pointer;
 }
 
