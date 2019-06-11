@@ -10,8 +10,7 @@
 
     // put this at the top of the page to avoid flash of js loading
     if (localStorage.getItem('dark-mode') == 'true') {
-        var html = document.getElementsByTagName('html')[0];
-        html.classList.add('is-dark-mode');
+        document.getElementsByTagName('html')[0].classList.add('is-dark-mode');
     }
 </script>
 

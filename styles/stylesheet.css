@@ -16,14 +16,14 @@
 
     --box-shadow-light: 0 .1em .15em rgba(0, 0, 0, .05);
     --box-shadow-dark: 0 .15em .4em -0.05em rgba(0, 0, 0, .35);
-    --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94); /* https://easings.net/en#easeOutQuad */
+    --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --grid-gap: .8em;
 }
 
 :root.is-dark-mode {
     --heading-color: #ffffff;
     --text-color: #d9e2f4;
-    --text-color-alt: #b8c0cf;
+    --text-color-alt: #a9b2c4;
     --link-color: #8cabe6;
     --code-color: #242f45;
 
@@ -160,7 +160,7 @@ header.yir-section {
 
     from {
           opacity: 0;
-          transform: translateY(30px);
+          transform: translateY(15px);
     }
 
     to {
