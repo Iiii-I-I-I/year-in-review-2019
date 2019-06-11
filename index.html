@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
+<script>
+    // if no localStorage item is set (user hasn't visited the site before),
+    // check for user's system-level preference
+    if (localStorage.getItem('dark-mode') == null) {
+        localStorage.setItem('dark-mode', window.matchMedia('(prefers-color-scheme: dark)').matches);
+    }
+
+    // put this at the top of the page to avoid flash of js loading
+    if (localStorage.getItem('dark-mode') == 'true') {
+        var html = document.getElementsByTagName('html')[0];
+        html.classList.add('is-dark-mode');
+    }
+</script>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +26,6 @@
 </head>
 
 <body>
-
     <header class="yir-section">
         <div class="title">
             <h1>
@@ -22,7 +35,6 @@
             </h1>
         </div>
     </header>
-
     <nav class="yir-section">
         <ul class="yir-container">
             <li><a href="#traffic">Traffic</a></li>
@@ -42,7 +54,6 @@
             </li>
         </ul>
     </nav>
-
     <section class="yir-section traffic">
         <div class="yir-container">
             <h2 id="traffic">Traffic</h2>
@@ -86,7 +97,6 @@
             <p>Biltong burgdoggen swine turducken tongue. Pig rump tri-tip flip flop bip flank, leberkas pastrami capicola. Porchetta doner brisket, buffalo burgdoggen turkey swine drumstick tri-tip cow beef ribs.</p>
         </div>
     </section>
-
     <section class="yir-section wikis">
         <div class="yir-container">
             <h2 id="wikis">New wikis</h2>
@@ -103,7 +113,6 @@
             </div>
         </div>
     </section>
-
     <section class="yir-section popular">
         <div class="yir-container">
             <h2 id="popular">Superlatives</h2>
@@ -179,7 +188,6 @@
             </div>
         </div>
     </section>
-
     <section class="yir-section milestones">
         <div class="yir-container">
             <h2 id="milestones">Milestones</h2>
@@ -236,7 +244,6 @@
             </ul>
         </div>
     </section>
-
     <section class="yir-section editors">
         <div class="yir-container">
             <h2 id="editors">The community</h2>
@@ -269,7 +276,6 @@
             </dl>
         </div>
     </section>
-
     <section class="yir-section technical">
         <div class="yir-container">
             <h2 id="technical">Technical</h2>
@@ -277,7 +283,6 @@
             </dl>
         </div>
     </section>
-
     <section class="yir-section irl">
         <div class="yir-container">
             <h2 id="irl">Real-life meetups</h2>
@@ -334,7 +339,6 @@
             </div>
         </div>
     </section>
-
     <footer class="yir-section">
         <div class="yir-container">
             <h2>Thank you!</h2>
@@ -342,7 +346,6 @@
             </dl>
         </div>
     </footer>
-
     <script type="text/javascript" src="scripts/dark-mode.min.js"></script>
     <script type="text/javascript" src="scripts/views.min.js"></script>
     <script>
@@ -355,7 +358,6 @@
             });
         });
     </script>
-
 </body>
 
 </html>
