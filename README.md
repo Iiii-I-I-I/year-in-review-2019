@@ -6,7 +6,7 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 
 ### Traffic stats
 - [ ] pageviews, etc. - how specific can we get?
-- [x] percent growth (make a nice graph) - annotate big increases/decreases
+- [x] percent growth (make a nice graph) - [annotate big increases/decreases](https://en.wikipedia.org/wiki/Wikipedia:Article_traffic_jumps)
 - [x] traffic recovery vs old wikia site
 - [ ] visits by country, new country visits
 
@@ -61,7 +61,7 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 - [x] talk about real life meetups
 - [x] presence at runefest
 - [x] show photos and videos?
-- [ ] add lightbox https://photoswipe.com
+- [x] add lightbox
 
 ### Trivia
 - [ ] bits of RS trivia found on our articles
@@ -76,8 +76,10 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 * https://rsms.me/inter/
 * https://letterboxd.com/2018/
 * https://dribbble.com/year/2018/
-* https://annual.wikimedia.org/2017/
-* https://www.projectwallace.com/~teamwallace/github
+* https://en.wikipedia.org/wiki/Wikipedia:Statistics
+    * https://annual.wikimedia.org/2017/
+    * https://stats.wikimedia.org/v2
+* https://www.projectwallace.com/~iiii-i-i-i/runescape-wiki
 * https://news.microsoft.com/bythenumbers/en/homepage
 * https://www.typography.com/fonts/ideal-sans/how-to-use
 * https://www.nytimes.com/interactive/2017/reader-center/year-in-review.html
