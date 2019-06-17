@@ -656,11 +656,6 @@ code {
 .irl-gallery a:hover,
 .irl-gallery a:focus {
     transform: translateY(-0.15em);
-    filter: brightness(1);
-}
-
-.is-dark-mode .irl-gallery a {
-    filter: brightness(0.85);
 }
 
 .irl-gallery img {
