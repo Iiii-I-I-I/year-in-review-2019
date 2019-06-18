@@ -268,3 +268,12 @@
 
     return Views;
 }));
+
+var views = [],
+    triggers = document.querySelectorAll('.image-trigger');
+[].forEach.call(triggers, function(element, index) {
+    views[index] = new Views(element, {
+        loader: 'Loading...',
+        anywhereToClose: true
+    });
+});
