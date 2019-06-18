@@ -21,7 +21,7 @@
 }
 
 :root.is-dark-mode {
-    --heading-color: #ffffff;
+    --heading-color: #e7ebf4;
     --text-color: #d9e2f4;
     --text-color-alt: #98a3b8;
     --link-color: #8cabe6;
@@ -123,18 +123,22 @@ a:focus {
     padding: 8em 7vw;
 }
 
-@media screen and (max-width: 800px) {
-
-    .yir-container {
-        padding: 6em 5vw;
-    }
-
+.yir-container > h3 {
+    margin-top: 2em;
 }
 
 .byline {
     color: var(--text-color-alt);
     font-size: .85em;
     margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+
+    .yir-container {
+        padding: 6em 5vw;
+    }
+
 }
 
 /* ------------------
