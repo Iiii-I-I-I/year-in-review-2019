@@ -23,7 +23,7 @@
 :root.is-dark-mode {
     --heading-color: #ffffff;
     --text-color: #d9e2f4;
-    --text-color-alt: #a9b2c4;
+    --text-color-alt: #98a3b8;
     --link-color: #8cabe6;
     --code-color: #242f45;
 
@@ -224,15 +224,26 @@ nav ul.yir-container {
 }
 
 nav li a {
-    color: var(--text-color);
-    /* font-weight: bold; */
-    padding: .5em .75em;
+    color: var(--text-color-alt);
+    padding: .4em .75em .5em;
+    transition: .2s ease;
 }
 
+/* pull first li to the left to make up for .75em padding and keep text aligned to left edge */
 nav li:first-of-type a {
-    padding-left: 0;
+    margin-left: -0.75em;
 }
 
+/* nav .nav-active { */
+nav li a:hover,
+nav li a:focus {
+    color: var(--text-color);
+    background-color: var(--section-color);
+    border-radius: .25em;
+    text-decoration: none;
+}
+
+/* moon toggle starts here */
 nav li:last-of-type {
     display: flex;
 }
@@ -241,8 +252,8 @@ nav li:last-of-type {
 #dark-mode-toggle {
     background: none;
     margin: auto;
-    padding: 0;
-    padding-left: .75em;
+    margin-right: -0.75em;
+    padding: 0 .75em;
     border: none;
     cursor: pointer;
 }
