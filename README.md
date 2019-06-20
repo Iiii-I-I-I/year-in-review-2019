@@ -65,6 +65,7 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 
 ### Trivia
 - [ ] bits of RS trivia found on our articles
+- [ ] guess the _____ (click to reveal like https://2018.stateofjs.com/awards/?)
 
 ### Thank readers and users
 - [ ] ask for help with big projects
