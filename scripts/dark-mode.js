@@ -1,3 +1,4 @@
+// DARK MODE TOGGLE
 // <https://blog.jim-nielsen.com/2018/icon-galleries-dark-mode/>
 // <https://medium.com/@dizzyup/adding-a-little-dark-magic-to-the-web-8eb82ce5fd91>
 // <https://dev.to/ananyaneogi/create-a-dark-light-mode-switch-with-css-variables-34l8>
@@ -13,6 +14,7 @@ document.getElementById('dark-mode-toggle').addEventListener('click', function (
     }
 });
 
+// IMAGE LAZY LOADING
 // <https://css-tricks.com/a-few-functional-uses-for-intersection-observer-to-know-when-an-element-is-in-view/>
 
 let observer = new IntersectionObserver(
@@ -27,6 +29,6 @@ let observer = new IntersectionObserver(
             observer.unobserve(entry.target);
         }
     });
-}, {rootMargin: "0px 0px 200px 0px"});
+}, {rootMargin: "200px 0px"});
 
 document.querySelectorAll('.thumb').forEach(img => { observer.observe(img) });
