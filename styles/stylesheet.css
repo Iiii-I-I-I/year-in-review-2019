@@ -202,6 +202,16 @@ header.yir-section {
 
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+
+    .title-small:first-of-type,
+    .title-small:last-of-type,
+    .title-big {
+        animation: none;
+    }
+
+}
+
 /* ------------------
           nav
    ------------------ */
