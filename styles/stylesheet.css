@@ -16,7 +16,10 @@
 
     --box-shadow-light: 0 .1em .15em rgba(0, 0, 0, .05);
     --box-shadow-dark: 0 .15em .4em -0.05em rgba(0, 0, 0, .35);
+
     --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-in-cubic: cubic-bezier(0.77, 0, 0.175, 1);
+
     --grid-gap: .8em;
 }
 
@@ -213,7 +216,7 @@ header.yir-section {
 }
 
 /* ------------------
-          nav
+           nav
    ------------------ */
 
 nav {
@@ -257,7 +260,7 @@ nav li a:focus {
     text-decoration: none;
 }
 
-/* moon toggle starts here */
+/* dark mode toggle */
 nav li:last-of-type {
     display: flex;
 }
@@ -396,6 +399,7 @@ nav li:last-of-type {
     background: var(--section-color-alt);
     box-shadow: var(--box-shadow-light);
     padding: 1.25em 1.8em;
+    border-radius: .25em;
 }
 
 .popular-pages + .popular-pages {
@@ -406,7 +410,7 @@ nav li:last-of-type {
     color: var(--text-color-alt);
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
     padding-bottom: .35em;
-    border-bottom: 1px solid var(--accent-color);
+    border-bottom: 2px solid var(--accent-color);
 }
 
 .popular-pages ol {
