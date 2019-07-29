@@ -35,7 +35,7 @@
     --accent-color: #313e59;
     --accent-color-alt: #596e96;
 
-    --box-shadow-light: 0 .15em .25em rgba(0, 0, 0, .2);
+    --box-shadow-light: 0 .15em .3em rgba(0, 0, 0, .15);
     --box-shadow-dark: 0 .25em .75em rgba(0, 0, 0, .35);
 }
 
@@ -450,47 +450,51 @@ nav li:last-of-type {
 }
 
 .is-dark-mode .popular-pages li::before {
-    filter: brightness(.8) contrast(1.5) saturate(.8);
+    filter: brightness(.7) contrast(1.5) saturate(.8);
 }
 
+/* rsw colors */
+
 .popular-pages.rsw li:nth-of-type(1)::before {
-    background: #165d88;
+    background: #266087;
 }
 
 .popular-pages.rsw li:nth-of-type(2)::before {
-    background: #246c97;
+    background: #327097;
 }
 
 .popular-pages.rsw li:nth-of-type(3)::before {
-    background: #377ba3;
+    background: #4081A7;
 }
 
 .popular-pages.rsw li:nth-of-type(4)::before {
-    background: #438ab5;
+    background: #4F91B6;
 }
 
 .popular-pages.rsw li:nth-of-type(5)::before {
-    background: #6ba5c8;
+    background: #5FA1C4;
 }
 
+/* osw colors */
+
 .popular-pages.osw li:nth-of-type(1)::before {
-    background: #8c6137;
+    background: #875A26;
 }
 
 .popular-pages.osw li:nth-of-type(2)::before {
-    background: #A27140;
+    background: #976832;
 }
 
 .popular-pages.osw li:nth-of-type(3)::before {
-    background: #B7814B;
+    background: #A77740;
 }
 
 .popular-pages.osw li:nth-of-type(4)::before {
-    background: #C99057;
+    background: #B6864F;
 }
 
 .popular-pages.osw li:nth-of-type(5)::before {
-    background: #D99E64;
+    background: #C4955F;
 }
 
 @media screen and (max-width: 550px) {
