@@ -14,7 +14,7 @@
     --accent-color: #dae0e4;
     --accent-color-alt: #a2abb7;
 
-    --box-shadow-light: 0 .1em .15em rgba(0, 0, 0, .05);
+    --box-shadow-light: 0 .1em .25em rgba(0, 0, 0, .08);
     --box-shadow-dark: 0 .15em .4em -0.05em rgba(0, 0, 0, .35);
 
     --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -399,7 +399,7 @@ nav li:last-of-type {
     background: var(--section-color-alt);
     box-shadow: var(--box-shadow-light);
     padding: 1.25em 1.8em;
-    border-radius: .25em;
+    border-radius: .3em;
 }
 
 .popular-pages + .popular-pages {
@@ -407,10 +407,10 @@ nav li:last-of-type {
 }
 
 .popular-pages h4 {
-    color: var(--text-color-alt);
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
+    font-weight: normal;
     padding-bottom: .35em;
-    border-bottom: 2px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
 }
 
 .popular-pages ol {
@@ -434,7 +434,7 @@ nav li:last-of-type {
     margin-right: .75em;
     padding: .45em;
 
-    background: var(--accent-color);
+    color: white;
     border-radius: 50%;
     font-size: .75em;
     font-weight: bold;
@@ -447,6 +447,50 @@ nav li:last-of-type {
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.is-dark-mode .popular-pages li::before {
+    filter: brightness(.8) contrast(1.5) saturate(.8);
+}
+
+.popular-pages.rsw li:nth-of-type(1)::before {
+    background: #165d88;
+}
+
+.popular-pages.rsw li:nth-of-type(2)::before {
+    background: #246c97;
+}
+
+.popular-pages.rsw li:nth-of-type(3)::before {
+    background: #377ba3;
+}
+
+.popular-pages.rsw li:nth-of-type(4)::before {
+    background: #438ab5;
+}
+
+.popular-pages.rsw li:nth-of-type(5)::before {
+    background: #6ba5c8;
+}
+
+.popular-pages.osw li:nth-of-type(1)::before {
+    background: #8c6137;
+}
+
+.popular-pages.osw li:nth-of-type(2)::before {
+    background: #A27140;
+}
+
+.popular-pages.osw li:nth-of-type(3)::before {
+    background: #B7814B;
+}
+
+.popular-pages.osw li:nth-of-type(4)::before {
+    background: #C99057;
+}
+
+.popular-pages.osw li:nth-of-type(5)::before {
+    background: #D99E64;
 }
 
 @media screen and (max-width: 550px) {
@@ -570,8 +614,8 @@ html:not(.is-dark-mode) .wiki {
     content: "";
     position: absolute;
     top: 5px;
-    left: 35px;
-    width: 4px;
+    left: 36px;
+    width: 2px;
     height: calc(100% - 5px);
     /*  fade in the ends of the line using pixel values (instead of percentages)
         with help from <https://stackoverflow.com/a/30425097> */
@@ -600,13 +644,13 @@ html:not(.is-dark-mode) .wiki {
 /* the dot */
 .milestone-list li::before {
     position: absolute;
-    top: 32px;
-    left: -44px;
+    top: 35px;
+    left: -40px;
     content: "";
-    width: 17px;
-    height: 17px;
-    background-color: var(--accent-color-alt);
-    border: 5px solid var(--section-color-alt);
+    width: 15px;
+    height: 15px;
+    background-color: var(--section-color-alt);
+    border: 2px solid var(--accent-color-alt);
     border-radius: 50%;
 }
 
@@ -628,7 +672,7 @@ code {
     }
 
     .milestone-list li::before {
-        top: 21px;
+        top: 26px;
     }
 
 }
