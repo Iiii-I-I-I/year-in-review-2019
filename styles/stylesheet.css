@@ -648,13 +648,13 @@ html:not(.is-dark-mode) .wiki {
 /* the dot */
 .milestone-list li::before {
     position: absolute;
-    top: 35px;
+    top: 36px;
     left: -40px;
     content: "";
     width: 15px;
     height: 15px;
-    background-color: var(--section-color-alt);
-    border: 2px solid var(--accent-color-alt);
+    background-color: var(--accent-color-alt);
+    border: 2px solid var(--section-color-alt);
     border-radius: 50%;
 }
 
