@@ -80,6 +80,7 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 * https://en.wikipedia.org/wiki/Wikipedia:Statistics
     * https://annual.wikimedia.org/2017/
     * https://stats.wikimedia.org/v2
+* https://www.reddit.com/r/runescape/comments/6bduiy/
 * https://www.projectwallace.com/~iiii-i-i-i/runescape-wiki
 * https://news.microsoft.com/bythenumbers/en/homepage
 * https://www.typography.com/fonts/ideal-sans/how-to-use
