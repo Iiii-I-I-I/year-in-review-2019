@@ -9,7 +9,7 @@
     --link-color: #327ba7;
     --code-color: #edf1f1;
 
-    --section-color: #f4f6f6;
+    --section-color: #f2f4f4;
     --section-color-alt: #f9fafa;
     --accent-color: #dae0e4;
     --accent-color-alt: #a2abb7;
@@ -540,6 +540,10 @@ html:not(.is-dark-mode) .wiki {
 .wiki h3,
 .wiki .byline {
     color: white;
+}
+
+.wiki h3 {
+    line-height: 1.25;
 }
 
 .wiki:hover,
