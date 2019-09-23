@@ -46,6 +46,7 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 - [ ] number of videos: 0
 - [ ] number of ads: 0
 - [ ] average number of edits a day
+- [ ] number of bonds/coins paid out for OSWF
 - [x] number of Wikian titles granted
 - [x] number of DMCA takedowns sent
 - [ ] examples https://github.com/jwngr/sdow/blob/master/website/src/resources/wikipediaFacts.json
