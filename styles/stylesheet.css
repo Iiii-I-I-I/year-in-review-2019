@@ -735,9 +735,6 @@ code {
 }
 
 .irl-gallery {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow: scroll;
     margin-top: 1.5em;
 }
 
@@ -752,15 +749,20 @@ code {
 
 .irl-gallery img {
     display: block;
-    width: 80vw;
     border-radius: .25em;
     box-shadow: var(--box-shadow-dark);
 }
 
 @media screen and (max-width: 499px) {
 
-    /* break out of .yir-container */
     .irl-gallery {
+        /* horizontal scroll */
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+
+        /* break out of .yir-container */
         margin: 1em -5vw 0;
         padding: .5em 5vw;
     }
@@ -771,6 +773,11 @@ code {
 
     .irl-gallery .image-trigger:last-child img {
         margin-right: 5vw;
+    }
+
+    .irl-gallery img {
+        width: 80vw;
+        scroll-snap-align: center;
     }
 
 }
