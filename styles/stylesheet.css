@@ -52,6 +52,7 @@ body {
     font-size: 1.3rem;
     font-family: 'IBM Plex Sans', 'Helvetica Neue', 'Arial', sans-serif;
     color: var(--text-color);
+    background-color: var(--section-color-alt);
     margin: 0;
 }
 
@@ -124,6 +125,15 @@ a:focus {
     max-width: 52rem;
     margin: 0 auto;
     padding: 8em 7vw;
+}
+
+@supports (padding: max(0px)) {
+
+    .yir-container {
+        padding-left: max(7vw, env(safe-area-inset-left));
+        padding-right: max(7vw, env(safe-area-inset-right));
+    }
+
 }
 
 .yir-container > h3 {
