@@ -348,7 +348,7 @@ nav li:last-of-type {
 .traffic-stats {
     display: grid;
     grid-gap: var(--grid-gap);
-    margin-top: 3em;
+    margin-top: 1.25em;
 }
 
 .tile {
@@ -364,6 +364,10 @@ nav li:last-of-type {
     font-weight: normal;
     padding-bottom: .35em;
     border-bottom: 1px solid var(--accent-color);
+}
+
+.traffic-stats .tile h4 {
+    font-size: .85em;
 }
 
 .tile dt {
