@@ -345,7 +345,7 @@ nav li:last-of-type {
         traffic
    ------------------ */
 
-.traffic-stats {
+.stats {
     display: grid;
     grid-gap: var(--grid-gap);
     margin-top: 1.25em;
@@ -355,7 +355,7 @@ nav li:last-of-type {
     flex: 1;
     background: var(--section-color-alt);
     box-shadow: var(--box-shadow-light);
-    padding: 1.25em 1.6em;
+    padding: 1.2em 1.5em;
     border-radius: var(--border-radius);
 }
 
@@ -366,8 +366,8 @@ nav li:last-of-type {
     border-bottom: 1px solid var(--accent-color);
 }
 
-.traffic-stats .tile h4 {
-    font-size: .85em;
+.traffic .tile h4 {
+    font-size: .9em;
 }
 
 .tile dt {
@@ -423,30 +423,30 @@ nav li:last-of-type {
     filter: brightness(.7) contrast(1.5) saturate(.8);
 }
 
-.traffic-stats .tile li:nth-of-type(1)::before {
+.traffic .tile li:nth-of-type(1)::before {
     background: #569d18;
 }
 
-.traffic-stats .tile li:nth-of-type(2)::before {
+.traffic .tile li:nth-of-type(2)::before {
     background: #62b41c;
 }
 
-.traffic-stats .tile li:nth-of-type(3)::before {
+.traffic .tile li:nth-of-type(3)::before {
     background: #75c72d;
 }
 
-.traffic-stats .tile li:nth-of-type(4)::before {
+.traffic .tile li:nth-of-type(4)::before {
     background: #8ed352;
 }
 
 @media screen and (max-width: 399px) {
 
-    .traffic-stats .tile dt {
+    .stats .tile dt {
         float: left;
         margin-right: .7rem;
     }
 
-    .traffic-stats .tile dd {
+    .stats .tile dd {
         margin-top: .8rem;
     }
 
@@ -454,7 +454,7 @@ nav li:last-of-type {
 
 @media screen and (min-width: 400px) {
 
-    .traffic-stats {
+    .stats {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -462,7 +462,7 @@ nav li:last-of-type {
 
 @media screen and (min-width: 650px) {
 
-    .traffic-stats {
+    .stats {
         grid-template-columns: repeat(3, 1fr);
     }
 
@@ -723,35 +723,20 @@ code {
 }
 
 /* ------------------
-        editors
+        community
    ------------------ */
 
-.editor-stats {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    margin: 1em 0 0;
-}
-
-.editor-stats .stat {
-    width: 30%;
-    margin: 1.5em 1em 0 0;
-}
-
-.editor-stats .stat dd {
+.community dt {
     color: #3ea6e6;
-    font-size: 3.5em;
-    font-weight: bold;
-    margin: 0 0 -0.15em;
 }
 
-@media screen and (min-width: 800px) {
+/* @media screen and (min-width: 800px) {
 
     .editor-stats .stat:nth-child(3n) {
         margin-right: 0;
     }
 
-}
+} */
 
 /* ------------------
           irl
