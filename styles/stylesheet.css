@@ -266,7 +266,7 @@ nav li:first-of-type a {
 nav li a:hover,
 nav li a:focus {
     color: var(--text-color);
-    background-color: var(--section-color);
+    background-color: var(--accent-color);
     border-radius: var(--border-radius);
     text-decoration: none;
 }
@@ -632,7 +632,7 @@ code {
     background: var(--code-color);
     border: 1px solid var(--accent-color);
     border-radius: .25em;
-    padding: .1em .25em;
+    padding: .05em .2em;
     margin: 0 .1em;
     font-family: 'IBM Plex Mono', 'Menlo', 'Inconsolata', monospace;
 }
@@ -764,7 +764,7 @@ code {
 
         /* break out of .yir-container */
         margin: 1em -5vw 0;
-        padding: .5em 5vw;
+        padding: .5em 5vw 1em;
     }
 
     .irl-gallery .image-trigger + .image-trigger {
