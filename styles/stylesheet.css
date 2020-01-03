@@ -342,6 +342,19 @@ nav li:last-of-type {
 }
 
 /* ------------------
+         intro
+   ------------------ */
+
+.wg-logo {
+    display: flex;
+    margin-bottom: 1.5em;
+}
+
+.wg-logo a {
+    margin: auto;
+}
+
+/* ------------------
          wikis
    ------------------ */
 
