@@ -526,7 +526,7 @@ html:not(.is-dark-mode) .wiki {
 }
 
 .is-dark-mode .tile li::before {
-    filter: brightness(.7) contrast(1.5) saturate(.8);
+    filter: brightness(.8) contrast(1.5) saturate(.8);
 }
 
 /* rsw colors */
@@ -550,6 +550,22 @@ html:not(.is-dark-mode) .wiki {
     background: #5FA1C4;
 }
 
+.is-dark-mode .tile.rsw li:nth-of-type(1)::before {
+    background: #5FA1C4;
+}
+
+.is-dark-mode .tile.rsw li:nth-of-type(2)::before {
+    background: #4F91B6;
+}
+
+.is-dark-mode .tile.rsw li:nth-of-type(4)::before {
+    background: #327097;
+}
+
+.is-dark-mode .tile.rsw li:nth-of-type(5)::before {
+    background: #266087;
+}
+
 /* osw colors */
 .tile.osw li:nth-of-type(1)::before {
     background: #875A26;
@@ -569,6 +585,22 @@ html:not(.is-dark-mode) .wiki {
 
 .tile.osw li:nth-of-type(5)::before {
     background: #C4955F;
+}
+
+.is-dark-mode .tile.osw li:nth-of-type(1)::before {
+    background: #C4955F;
+}
+
+.is-dark-mode .tile.osw li:nth-of-type(2)::before {
+    background: #B6864F;
+}
+
+.is-dark-mode .tile.osw li:nth-of-type(4)::before {
+    background: #976832;
+}
+
+.is-dark-mode .tile.osw li:nth-of-type(5)::before {
+    background: #875A26;
 }
 
 @media screen and (max-width: 550px) {
@@ -721,6 +753,22 @@ code {
 
 .traffic .tile li:nth-of-type(4)::before {
     background: #8ed352;
+}
+
+.is-dark-mode .traffic .tile li:nth-of-type(1)::before {
+    background: #8ed352;
+}
+
+.is-dark-mode .traffic .tile li:nth-of-type(2)::before {
+    background: #75c72d;
+}
+
+.is-dark-mode .traffic .tile li:nth-of-type(3)::before {
+    background: #62b41c;
+}
+
+.is-dark-mode .traffic .tile li:nth-of-type(4)::before {
+    background: #569d18;
 }
 
 .community dt {
