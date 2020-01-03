@@ -29,6 +29,6 @@ let observer = new IntersectionObserver(
             observer.unobserve(entry.target);
         }
     });
-}, {rootMargin: "200px 0px"});
+}, {rootMargin: "500px 0px"});
 
 document.querySelectorAll('.thumb').forEach(img => { observer.observe(img) });
