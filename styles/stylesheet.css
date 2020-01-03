@@ -199,7 +199,7 @@ header.yir-section {
 }
 
 .title-small:first-of-type {
-    font-size: 9vmin;
+    font-size: 7.5vmin;
     animation: 1s var(--ease-out-quad) both gamers-rise-up;
 }
 
