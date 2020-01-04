@@ -14,8 +14,8 @@
     --accent-color: #dae0e4;
     --accent-color-alt: #a2abb7;
 
-    --box-shadow-light: 0 .7em .7em -.5em rgba(115, 116, 140, .15);
-    --box-shadow-dark: 0 .7em .7em -.5em rgba(115, 116, 140, .65);
+    --box-shadow-light: 0 .5em .7em -.6em rgba(115, 116, 140, .15);
+    --box-shadow-dark: 0 .5em .7em -.6em rgba(115, 116, 140, .65);
 
     --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --ease-in-cubic: cubic-bezier(0.77, 0, 0.175, 1);
@@ -635,11 +635,18 @@ html:not(.is-dark-mode) .wiki {
     margin-top: 1.5em;
 }
 
+/* images */
 .milestone-list .thumb {
     float: right;
     margin: 1.25em 0 0 1em;
+    transition: .2s ease-in-out;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-dark);
+}
+
+.milestone-list .thumb:hover,
+.milestone-list .thumb:focus {
+    transform: translateY(-0.15em);
 }
 
 /* the vertical line */
