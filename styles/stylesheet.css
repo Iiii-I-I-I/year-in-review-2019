@@ -14,8 +14,8 @@
     --accent-color: #dae0e4;
     --accent-color-alt: #a2abb7;
 
-    --box-shadow-light: 0 .7em .7em -.6em rgba(115, 116, 140, .15);
-    --box-shadow-dark: 0 .7em .7em -.6em rgba(115, 116, 140, .65);
+    --box-shadow-light: 0 .7em .7em -.5em rgba(115, 116, 140, .15);
+    --box-shadow-dark: 0 .7em .7em -.5em rgba(115, 116, 140, .65);
 
     --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     --ease-in-cubic: cubic-bezier(0.77, 0, 0.175, 1);
@@ -161,6 +161,8 @@ a:focus {
 
 header.yir-section {
     background-color: var(--section-color-alt);
+    position: relative;
+    z-index: 12; /* above nav to cover up the shadow */
 }
 
 .title {
@@ -236,11 +238,17 @@ nav {
     position: sticky;
     top: 0;
     z-index: 10;
-    box-shadow: 0 .5em .5em -0.3em rgba(0, 0, 0, .1);
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.03),
+        0 10px 20px rgba(0, 0, 0, 0.05),
+        0 30px 60px rgba(0, 0, 0, 0.08);
 }
 
 .is-dark-mode nav {
-    box-shadow: 0 .5em .5em -0.3em rgba(0, 0, 0, .4);
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.06),
+        0 10px 20px rgba(0, 0, 0, 0.10),
+        0 30px 60px rgba(0, 0, 0, 0.16);
 }
 
 nav ul.yir-container {
@@ -629,7 +637,7 @@ html:not(.is-dark-mode) .wiki {
 
 .milestone-list .thumb {
     float: right;
-    margin: 1.5em 0 0 1em;
+    margin: 1.25em 0 0 1em;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow-dark);
 }
@@ -810,7 +818,7 @@ code {
 
 .yir-section.technical .thumb {
     float: right;
-    margin: 1.5em 0 0 1em;
+    margin: 1.25em 0 0 1em;
 }
 
 .is-dark-mode .yir-section.technical .thumb {
