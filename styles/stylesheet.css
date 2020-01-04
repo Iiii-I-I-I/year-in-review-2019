@@ -713,7 +713,7 @@ code {
 }
 
 /* ------------------
-        traffic
+       statistics
    ------------------ */
 
 .stats {
@@ -800,6 +800,29 @@ code {
 
     .stats {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+/* ------------------
+        technical
+   ------------------ */
+
+.yir-section.technical .thumb {
+    float: right;
+    margin: 1.5em 0 0 1em;
+}
+
+.is-dark-mode .yir-section.technical .thumb {
+    filter: brightness(.8) contrast(1.5) saturate(.8);
+}
+
+@media screen and (max-width: 600px) {
+
+    .yir-section.technical .thumb {
+        float: none;
+        margin-left: 0;
+        max-width: 70vw;
     }
 
 }
