@@ -270,7 +270,6 @@ nav li:first-of-type a {
     margin-left: -0.75em;
 }
 
-/* nav .nav-active { */
 nav li a:hover,
 nav li a:focus {
     color: var(--text-color);
@@ -317,6 +316,7 @@ nav li:last-of-type {
         right: 0;
         background: transparent !important;
         box-shadow: none;
+        z-index: 13;
     }
 
     .is-dark-mode nav {
@@ -353,13 +353,31 @@ nav li:last-of-type {
          intro
    ------------------ */
 
-.wg-logo {
+.wg-logos {
     display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 1.5em;
 }
 
-.wg-logo a {
-    margin: auto;
+.wg-logos a {
+    margin: 0 1em;
+}
+
+.wg-logos img {
+    max-width: 27vw;
+}
+
+.is-dark-mode .wg-logos a {
+    filter: brightness(1.8) hue-rotate(5deg) saturate(.9);
+}
+
+@media screen and (max-width: 600px) {
+
+    .wg-logos a {
+        margin: 0 .25em;
+    }
+
 }
 
 /* ------------------
@@ -367,19 +385,15 @@ nav li:last-of-type {
    ------------------ */
 
 .wiki-group {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 90%;
+    display: grid;
+    grid-gap: var(--grid-gap);
     margin: 2em auto 0;
 }
 
 .wiki {
-    background-color: var(--accent-color);
-    width: calc((100% - var(--grid-gap)) / 2);
+    background-color: #444e5a; /* fallback if image doesn't load */
     padding: 1.5em 2em;
     border-radius: var(--border-radius);
-    box-sizing: border-box;
     box-shadow: var(--box-shadow-dark);
     transition: transform .2s ease-in-out;
 }
@@ -404,10 +418,6 @@ html:not(.is-dark-mode) .wiki {
     transform: translateY(-0.15em);
 }
 
-.wiki::after {
-    display: none;
-}
-
 .wiki.ptbr {
     background-image: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, .65)), url('../images/Wiki-PTBR.jpg');
     background-size: cover;
@@ -418,27 +428,12 @@ html:not(.is-dark-mode) .wiki {
     background-size: cover;
 }
 
-@media screen and (max-width: 650px) {
-
-    .wiki {
-        width: 100%;
-    }
-
-    .wiki + .wiki {
-        margin-top: var(--grid-gap);
-    }
-
-}
-
-@media screen and (max-width: calc(52rem + 12vw)) {
+@media screen and (min-width: 650px) {
 
     .wiki-group {
-        width: 100%;
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
     }
-
-}
-
-@media screen and (min-width: 650px) and (max-width: calc(52rem + 12vw)) {
 
     .wiki {
         padding: 1.25em 1.4em;
@@ -717,12 +712,14 @@ code {
 @media screen and (max-width: 800px) {
 
     .milestone-list {
-        margin-left: -1.25em;
+        margin-left: -1.5em;
+        padding-left: 58px;
         padding-right: 0;
     }
 
     .milestone-list li::before {
         top: 26px;
+        left: -31px;
     }
 
 }
