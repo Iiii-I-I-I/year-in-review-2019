@@ -17,6 +17,9 @@ The intent is to create something like [Forum:Weird Gloop week 2 update](https:/
 - [ ] other fun stats
 - [ ] https://en.wikipedia.org/wiki/Wikipedia:2018_Top_50_Report
 - [ ] https://en.wikipedia.org/wiki/Wikipedia:Wikipedia_Signpost/2018-12-24/Special_report
+- [ ] https://wikimediafoundation.org/wikipedia20/data/
+   - [ ] dropdowns/radio buttons: [most viewed articles / most edited articles]▼ in [rsw / osw / ptbr / rsc]▼ for 2021
+
 
 ### Launch of new wikis
 - [x] pt-br
